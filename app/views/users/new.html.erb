@@ -1,0 +1,33 @@
+<div class="text-center">
+  <h1>サインアップ</h1>
+</div>
+
+<div class="row">
+  <div class="col-sm-6 offset-sm-3">
+
+    <%= form_with(model: @user) do |f| %>
+
+      <div class="mb-3">
+        <%= f.label :name, 'ユーザーネーム' %>
+        <%= f.text_field :name, class: 'form-control' %>
+      </div>
+
+      <div class="mb-3">
+        <%= f.label :email, 'メールアドレス' %>
+        <%= f.email_field :email, class: 'form-control' %>
+      </div>
+
+      <div class="mb-3">
+        <%= f.label :password, 'パスワード' %>
+        <%= f.password_field :password, class: 'form-control' %>
+      </div>
+
+      <div class="mb-3">
+        <%= f.label :password_confirmation, 'パスワード再確認' %>
+        <%= f.password_field :password_confirmation, class: 'form-control' %>
+      </div>
+
+      <%= f.submit 'サインアップ', class: 'btn btn-primary w-100' %>
+    <% end %>
+  </div>
+</div>
