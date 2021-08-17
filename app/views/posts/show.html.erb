@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @post.photo.url if @post.photo? %>
+  <%= image_tag @post.title.url if @post.title? %>
+  <%= image_tag @post.explanation.url if @post.explanation? %>
+</p>
+
+<%= link_to '編集', edit_post_path(@post) %> |
+<%= link_to "削除", micropost, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-sm' %>
+<%= link_to '戻る', posts_path %>
