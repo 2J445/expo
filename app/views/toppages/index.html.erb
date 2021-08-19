@@ -1,6 +1,15 @@
 <% if logged_in? %>
   <p>ログイン完了ユーザ: <%= current_user.name %></p>
+ <ul>
+  <% @posts.each do |post| %>
+    <li><%= link_to post.id, post %> : <%= post.photo.url %> &gt; <%= post.title %> &gt; <%= post.explanation %></li>
+  <% end %>
+</ul>
+<%== pagy_bootstrap_nav(@pagy) %>
 
+<p>
+  <%= image_tag @post.photo.url if @post.photo? %>
+</p>
 <% else %>
   <div class="bg-secondary p-3 p-sm-5 my-4 rounded">
     <div class="text-center text-white">

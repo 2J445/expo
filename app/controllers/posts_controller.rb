@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[ show edit update destroy ]
   before_action :require_user_logged_in
-  before_action :correct_user, only: [:destroy]
+  before_action :current_user, only: [:destroy]
 
 
   # GET /posts or /posts.json
@@ -38,22 +38,23 @@ class PostsController < ApplicationController
 
   # PATCH/PUT /posts/1 or /posts/1.json
   def update
-    respond_to do |format|
-      if @post.update(post_params)
-        format.html { redirect_to @post, notice: "Post was successfully updated." }
-        format.json { render :show, status: :ok, location: @post }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
-      end
+    @post = Post.find(params[:id])
+
+    if @post.update(post_params)
+      flash[:success] = '正常に更新されました'
+      redirect_to @post
+    else
+      flash.now[:danger] = '更新されませんでした'
+      render :edit
     end
   end
 
   # DELETE /posts/1 or /posts/1.json
   def destroy
+    @post = Post.find_by(id: params[:id])
     @post.destroy
     flash[:success] = '作品を削除しました。'
-    redirect_back(fallback_location: root_path)
+    redirect_to("/")
   end
 
   private
@@ -67,10 +68,4 @@ class PostsController < ApplicationController
       params.require(:post).permit(:photo, :title, :explanation)
     end
     
-    def correct_user
-      @post = current_user.posts.find_by(id: params[:id])
-      unless @post
-        redirect_to root_url
-      end
-    end
 end

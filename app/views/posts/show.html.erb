@@ -1,12 +1,24 @@
 <p id="notice"><%= notice %></p>
-
+<div
 <p>
-  <strong>Image:</strong>
   <%= image_tag @post.photo.url if @post.photo? %>
-  <%= image_tag @post.title.url if @post.title? %>
-  <%= image_tag @post.explanation.url if @post.explanation? %>
 </p>
+</div>
+
+<div>
+<h3>作品名</h3>
+<p>
+  <%= @post.title %>
+</p>
+</div>
+
+<div>
+<h3>詳細</h3>
+<p>
+  <%= @post.explanation %>
+</p>
+</div>
 
 <%= link_to '編集', edit_post_path(@post) %> |
-<%= link_to "削除", micropost, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-sm' %>
-<%= link_to '戻る', posts_path %>
+<%= link_to "削除", @post, method: :delete, data: { confirm: "削除しますか？" } %> |
+<%= link_to '戻る', '/' %>
