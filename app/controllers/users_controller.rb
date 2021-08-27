@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :require_user_logged_in, only: [:index, :show]
+  before_action :require_user_logged_in, only: [:index, :show, :edit]
 
   def index
     @pagy, @users = pagy(User.order(id: :desc), items: 25)
@@ -8,6 +8,11 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @pagy, @posts = pagy(@user.posts.order(id: :desc))
+    counts(@user)
+    
+    @pagy, @followings = pagy(@user.followings)
+    counts(@user)
+    @pagy, @followers = pagy(@user.followers)
     counts(@user)
   end
 
@@ -27,9 +32,45 @@ class UsersController < ApplicationController
     end
   end
   
-  private
+  def edit
+    @user = User.find(params[:id])
+  end
+  
+  def update
+    @user = User.find(params[:id])
 
+    if @user.update(user_params)
+      flash[:success] = '正常に更新されました'
+      render :edit
+    else
+      flash.now[:danger] = '更新されませんでした'
+      render :edit
+    end
+  end
+  
+  def destroy
+  end
+  
+  def followings
+    @user = User.find(params[:id])
+    @pagy, @followings = pagy(@user.followings)
+    counts(@user)
+  end
+
+  def followers
+    @user = User.find(params[:id])
+    @pagy, @followers = pagy(@user.followers)
+    counts(@user)
+  end
+  
+  
+  private
+  
+  def set_image
+      @image = Image.find(params[:id])
+  end
+    
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :image, :self_introduction)
   end
 end

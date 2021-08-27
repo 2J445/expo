@@ -1,7 +1,42 @@
+<% if current_user.posts %>
+<p id="notice"><%= notice %></p>
+<div>
+<p>
+  <%= image_tag @post.photo.url, size: '900x600' if @post.photo? %>
+</p>
+</div>
+
+<div>
+<h3>作品名</h3>
+<p>
+  <%= @post.title  %>
+</p>
+</div>
+
+<div>
+<h3>詳細</h3>
+<p>
+  <%= @post.explanation %>
+</p>
+</div>
+
+<div>
+  <h3>作者</h3>
+ <p>
+   <%= link_to @post.user.name,  user_path(@post.user)%>
+ </p>
+</div>
+
+
+<%= link_to '編集', edit_post_path(@post) %> |
+<%= link_to "削除", @post, method: :delete, data: { confirm: "削除しますか？" } %> |
+<%= link_to '戻る', '/' %>
+
+<% else %>
 <p id="notice"><%= notice %></p>
 <div
 <p>
-  <%= image_tag @post.photo.url if @post.photo? %>
+  <%= image_tag @post.photo.url, size: '900x600' if @post.photo? %>
 </p>
 </div>
 
@@ -19,6 +54,14 @@
 </p>
 </div>
 
-<%= link_to '編集', edit_post_path(@post) %> |
-<%= link_to "削除", @post, method: :delete, data: { confirm: "削除しますか？" } %> |
+<div>
+  <h3>作者</h3>
+ <p>
+   <%= link_to @post.user.name,  user_path(@post.user)%>
+ </p>
+</div>
+
+
+
 <%= link_to '戻る', '/' %>
+<% end %>

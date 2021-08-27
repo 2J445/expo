@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: %i[ show edit update destroy ]
+  before_action :set_post, only: [:show, :edit, :update, :destroy ]
   before_action :require_user_logged_in
   before_action :current_user, only: [:destroy]
 
@@ -11,6 +11,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1 or /posts/1.json
   def show
+    @post = Post.find_by(id: params[:id])
   end
 
   # GET /posts/new
@@ -68,4 +69,11 @@ class PostsController < ApplicationController
       params.require(:post).permit(:photo, :title, :explanation)
     end
     
+    def correct_user
+      @post = current_user.posts.find_by(id: params[:id])
+      unless @post
+        redirect_to root_url
+      end
+    end
+  
 end
