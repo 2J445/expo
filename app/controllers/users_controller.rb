@@ -10,9 +10,11 @@ class UsersController < ApplicationController
     @pagy, @posts = pagy(@user.posts.order(id: :desc))
     counts(@user)
     
-    @pagy, @followings = pagy(@user.followings)
+    @followings = @user.followings.limit(5)
     counts(@user)
-    @pagy, @followers = pagy(@user.followers)
+    @followers = @user.followers.limit(5)
+    counts(@user)
+    @likes = @user.favorite_posts.limit(5)
     counts(@user)
   end
 
@@ -63,6 +65,11 @@ class UsersController < ApplicationController
     counts(@user)
   end
   
+  def likes
+     @user = User.find(params[:id])
+    @pagy,  @likes = pagy(@user.favorite_posts)
+    counts(@user)
+  end
   
   private
   

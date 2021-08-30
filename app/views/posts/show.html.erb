@@ -1,5 +1,6 @@
-<% if current_user.posts %>
+<% if current_user == @post.user %>
 <p id="notice"><%= notice %></p>
+<div>
 <div>
 <p>
   <%= image_tag @post.photo.url, size: '900x600' if @post.photo? %>
@@ -26,7 +27,7 @@
    <%= link_to @post.user.name,  user_path(@post.user)%>
  </p>
 </div>
-
+</div>
 
 <%= link_to '編集', edit_post_path(@post) %> |
 <%= link_to "削除", @post, method: :delete, data: { confirm: "削除しますか？" } %> |
@@ -34,7 +35,8 @@
 
 <% else %>
 <p id="notice"><%= notice %></p>
-<div
+<dvi>
+<div>
 <p>
   <%= image_tag @post.photo.url, size: '900x600' if @post.photo? %>
 </p>
@@ -60,8 +62,8 @@
    <%= link_to @post.user.name,  user_path(@post.user)%>
  </p>
 </div>
-
-
+<%= render 'favorites/favorite_button', post: @post %>
+</dvi>
 
 <%= link_to '戻る', '/' %>
 <% end %>

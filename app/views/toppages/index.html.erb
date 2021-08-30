@@ -1,22 +1,21 @@
 <% if logged_in? %>
-<h5>最新の投稿</h5>
- <ul>
-  <% @posts.each do |post| %>
-    <p><%= link_to image_tag(post.photo.url), post, size: '300x600' %></p>
-  <% end %>
-</ul>
 
+
+<h5>最新の投稿</h5>
+<%= link_to '作品一覧', @post %>
+<% @posts.each do |post| %>
+  <p><%= link_to image_tag(post.photo.url), post, size: '300x600' %></p>
+<% end %>
 
 <h5>人気の投稿</h5>
 
 <h5>人気のユーザー</h5>
 
 <h5>自分の投稿</h5>
- <ul>
-  <% @posts.each do |post| %>
+<%= link_to '自分の投稿一覧', user_path(current_user) %>
+  <% @posts_my.each do |post| %>
     <p><%= link_to image_tag(post.photo.url), post, size: '300x600' %></p>
   <% end %>
-</ul>
 
 <% else %>
   <div class=" p-3 p-sm-5 my-4 rounded">

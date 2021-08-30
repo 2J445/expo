@@ -21,15 +21,23 @@
   
   <div>
     <h5>フォローユーザー</h5>
+    <%= link_to 'フォロー一覧', followings_user_path(@user)%>
     <%= render 'users', users: @followings %>
    </div>
    
    <div>
-   <h5>フォロワーユーザー</h5>
-   <%= render 'users', users: @followers %>
+     <h5>フォロワーユーザー</h5>
+     <%= link_to 'フォロワー一覧', followers_user_path(@user) %>
+     <%= render 'users', users: @followers %>
    </div>
    
-   <h5>お気に入り作品</h5>
+   <div>
+     <h5>お気に入り作品</h5>
+     <%= link_to 'お気に入り一覧', likes_user_path(@user) %>
+     <% @likes.each do |post| %>
+       <p><%= link_to image_tag(post.photo.url), post, size: '300x600' %></p>
+     <% end %>
+   </div>
   
   <h5>自身の投稿</h5>
   <% if @posts.any? %>
@@ -64,7 +72,7 @@
   </aside>
   
   
-  
+  <div>
   <h5>このユーザーの投稿</h5>
   <% if @posts.any? %>
   <ul>
@@ -74,5 +82,6 @@
   </ul>
   <%== pagy_bootstrap_nav(@pagy) %>
   <% end %>
+  </div>
 
 <% end %>
