@@ -1,12 +1,12 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy ]
-  before_action :require_user_logged_in
   before_action :current_user, only: [:destroy]
+  before_action :set_search
 
 
   # GET /posts or /posts.json
   def index
-   @pagy, @posts = pagy(Post.order(id: :desc))
+     @pagy, @posts = pagy(Post.order(id: :desc))
   end
 
   # GET /posts/1 or /posts/1.json
@@ -56,6 +56,10 @@ class PostsController < ApplicationController
     flash[:success] = '作品を削除しました。'
     redirect_to("/")
   end
+  
+  def search
+    @pagy,@search_posts = pagy(@q.result(distinct: true))
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -73,6 +77,12 @@ class PostsController < ApplicationController
       unless @post
         redirect_to root_url
       end
+    end
+    
+    
+    
+    def set_search
+      @q = Post.ransack(params[:q])
     end
   
 end

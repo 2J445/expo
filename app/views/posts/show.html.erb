@@ -1,9 +1,10 @@
+<% if logged_in? %>
 <% if current_user == @post.user %>
 <p id="notice"><%= notice %></p>
 <div>
 <div>
 <p>
-  <%= image_tag @post.photo.url, size: '900x600' if @post.photo? %>
+  <%= image_tag @post.photo.url, size: '600x400' if @post.photo? %>
 </p>
 </div>
 
@@ -38,7 +39,7 @@
 <dvi>
 <div>
 <p>
-  <%= image_tag @post.photo.url, size: '900x600' if @post.photo? %>
+  <%= image_tag @post.photo.url, size: '600x400' if @post.photo? %>
 </p>
 </div>
 
@@ -63,6 +64,41 @@
  </p>
 </div>
 <%= render 'favorites/favorite_button', post: @post %>
+</dvi>
+
+<%= link_to '戻る', '/' %>
+<% end %>
+
+<% else %>
+
+<p id="notice"><%= notice %></p>
+<dvi>
+<div>
+<p>
+  <%= image_tag @post.photo.url, size: '600x400' if @post.photo? %>
+</p>
+</div>
+
+<div>
+<h3>作品名</h3>
+<p>
+  <%= @post.title %>
+</p>
+</div>
+
+<div>
+<h3>詳細</h3>
+<p>
+  <%= @post.explanation %>
+</p>
+</div>
+
+<div>
+  <h3>作者</h3>
+ <p>
+   <%= link_to @post.user.name,  user_path(@post.user)%>
+ </p>
+</div>
 </dvi>
 
 <%= link_to '戻る', '/' %>
