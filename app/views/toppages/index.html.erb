@@ -1,59 +1,89 @@
 <% if logged_in? %>
   <%= render 'search', q: @q, url: search_path %>
+  
+  <div class="item">
   <h5>最新の投稿</h5>
   <%= link_to '作品一覧', posts_path %>
-  <% @posts.each do |post| %>
-    <p><%= link_to image_tag(post.photo.url), post, size: '300x600' %></p>
+  </div>
+  <ul class="SP_Flex_container">
+    <% @posts.each do |post| %>
+    <p><%= link_to image_tag(post.photo.url), post %></p>
   <% end %>
-
-  <h5>人気の投稿</h5>
-  <% @favorite_posts.each do |post| %>
-    <p><%= link_to image_tag(post.photo.url), post, size: '300x600' %></p>
-  <% end %>
+  </ul>
   
-
+  <div class="item">
+  <h5>人気の投稿</h5>
+  </div>
+  <ul class="SP_Flex_container">
+    <% @favorite_posts.each do |post| %>
+    <p><%= link_to image_tag(post.photo.url), post %></p>
+  <% end %>
+  </ul>
+  
+  <div class="item">
   <h5>人気のユーザー</h5>
-  <% @follower_users.each do |user| %>
+  </div>
+  <ul class="user">
+    <% @follower_users.each do |user| %>
     <% if  user.image.present? %>
-      <%= link_to image_tag(user.image.url), user_path(user) if user.image? %>
+      <p><%= link_to image_tag(user.image.url), user_path(user) if user.image? %></p>
     <% else %>
-      <%= link_to image_tag(gravatar_url(user, { size: 280 })), user_path(user) %>
+      <p><%= link_to image_tag(gravatar_url(user, { size: 280 })), user_path(user) %></p>
     <% end %>
   <% end %>
-
+  </ul>
+  
+  <div class="item">
   <h5>自分の投稿</h5>
   <%= link_to '自分の投稿一覧', user_path(current_user) %>
+  </div>
+    <ul class="SP_Flex_container">
     <% @my_posts.each do |post| %>
-      <p><%= link_to image_tag(post.photo.url), post, size: '300x600' %></p>
+      <p><%= link_to image_tag(post.photo.url), post %></p>
     <% end %>
+  </ul>
+  
 
 <% else %>
 <%= render 'search', q: @q, url: search_path %>
+
   <div class=" p-3 p-sm-5 my-4 rounded">
     <article class="border">
       <h3>アプリ概要</h3>
     </article>
   </div>
   
+  <div class="item">
   <h5>最新の投稿</h5>
   <%= link_to '作品一覧', posts_path %>
-  <% @posts.each do |post| %>
-    <p><%= link_to image_tag(post.photo.url), post, size: '300x600' %></p>
+  </div>
+  <ul class="SP_Flex_container">
+    <% @posts.each do |post| %>
+    <p><%= link_to image_tag(post.photo.url), post %></p>
   <% end %>
-
-  <h5>人気の投稿</h5>
-  <% @favorite_posts.each do |post| %>
-    <p><%= link_to image_tag(post.photo.url), post, size: '300x600' %></p>
-  <% end %>
+  </ul>
   
-
+  <div class="item">
+  <h5>人気の投稿</h5>
+  </div>
+  <ul class="SP_Flex_container">
+    <% @favorite_posts.each do |post| %>
+    <p><%= link_to image_tag(post.photo.url), post %></p>
+  <% end %>
+  </ul>
+  
+  <div class="item">
   <h5>人気のユーザー</h5>
-  <% @follower_users.each do |user| %>
+  </div>
+  <ul class="user">
+    <% @follower_users.each do |user| %>
     <% if  user.image.present? %>
-      <%= link_to image_tag(user.image.url), user_path(user) if user.image? %>
+      <p><%= link_to image_tag(user.image.url), user_path(user) if user.image? %></p>
     <% else %>
-      <%= link_to image_tag(gravatar_url(user, { size: 280 })), user_path(user) %>
+      <p><%= link_to image_tag(gravatar_url(user)), user_path(user) %></p>
     <% end %>
   <% end %>
+  </ul>
+  
 
 <% end %>

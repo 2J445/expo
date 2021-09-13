@@ -58,7 +58,7 @@ class PostsController < ApplicationController
   end
   
   def search
-    @pagy,@search_posts = pagy(@q.result(distinct: true))
+    @pagy,@search_posts = pagy(@q.result(distinct: true).order(id: :desc), items:10)
   end
 
   private

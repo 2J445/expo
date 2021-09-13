@@ -8,3 +8,78 @@
 
 /*--子要素--*/
 .flex-item {/*--装飾省略--*/}
+.SP_Flex_container{
+    width: 100%;
+    margin: 10px auto;
+    
+    p{
+    	margin-bottom: 1%;
+        display: block;
+        text-align: center;
+        width: 50%;
+    }
+    
+    img{
+	   width: 250px;
+       height: 180px;
+       }
+}
+
+.user{
+    width: 100%;
+    margin: 10px auto;
+    
+    p{
+	    margin-bottom: 1%;
+        display: block;
+        text-align: center;
+        width: 50%;
+    }
+    
+    img{
+    	border-radius: 50%;
+        	width: 250px;
+    	    height: 250px;
+        }
+}
+
+    
+@media screen and (min-width:900px){
+    .SP_Flex_container{
+        display: flex;
+        justify-content: space-around;
+    
+   p{
+   	    margin-right: 0.5%;
+    	text-align: left;
+    	padding: 0 auto;
+    	position:relative;
+    	right:1.2%;
+    }
+    img{
+    	width: 280px;
+    	height: 180px;
+    }
+    }
+    
+    .user{
+        display: flex;
+        justify-content: space-around;
+    p{
+    	margin-right: 1%;
+    	text-align: left;
+    	padding: 0 auto;
+    	position:relative;
+    	right:1.2%;
+    }
+    img{
+    	border-radius: 50%;
+    	width: 250px;
+    	height: 250px;
+    }
+    }
+    .item{
+    	position:relative;
+    	right:5%;
+    }
+}

@@ -1,20 +1,12 @@
 <% if logged_in? %>
 <% if @current_user == @user %>
-<div class="row">
-  <aside class="col-sm-4">
-    <div class="card">
-      <div class="card-header">
-        <h3 class="card-title"><%= @user.name %></h3>
-      </div>
-      <div class="card-body">
-       <%= image_tag @user.image.url if @user.image? %>
-      </div>
-      <div class="card-body">
-        <li>プロフィール</li>
-       <p><%= @user.self_introduction %></p>
-      </div>
-    </div>
-  </aside>
+
+<div class="profile"></div>
+<h3><%= @user.name %></h3>
+<%= image_tag @user.image.url if @user.image? %>
+<li>プロフィール</li>
+<p><%= @user.self_introduction %></p>
+</div>
   
   <ul class=''>
     <%= link_to "編集", edit_user_path(current_user) %>
@@ -42,11 +34,9 @@
   
   <h5>自身の投稿</h5>
   <% if @posts.any? %>
-    <ul>
       <% @posts.each do |post| %>
         <p><%= link_to image_tag(post.photo.url), post %></p>
   <% end %>
-    </ul>
     <%== pagy_bootstrap_nav(@pagy) %>
   <% end %>
 
@@ -55,23 +45,12 @@
 
 <% else %>
 
-<div class="row">
-  <aside class="col-sm-4">
-    <div class="card">
-      <div class="card-header">
-        <h3 class="card-title"><%= @user.name %></h3>
-      </div>
-      <div class="card-body">
-       <%= image_tag @user.image.url if @user.image? %>
-      </div>
-      <div class="card-body">
-        <li>プロフィール</li>
-       <p><%= @user.self_introduction %></p>
-      </div>
-    </div>
-    <%= render 'relationships/follow_button', user: @user %>
-  </aside>
-  
+<div class="profile"></div>
+<h3><%= @user.name %></h3>
+<%= image_tag @user.image.url if @user.image? %>
+<li>プロフィール</li>
+<p><%= @user.self_introduction %></p>
+</div>
   
   <div>
   <h5>このユーザーの投稿</h5>
@@ -88,31 +67,19 @@
 <% end %>
 
 <% else %>
-<div class="row">
-  <aside class="col-sm-4">
-    <div class="card">
-      <div class="card-header">
-        <h3 class="card-title"><%= @user.name %></h3>
-      </div>
-      <div class="card-body">
-       <%= image_tag @user.image.url if @user.image? %>
-      </div>
-      <div class="card-body">
-        <li>プロフィール</li>
-       <p><%= @user.self_introduction %></p>
-      </div>
-    </div>
-  </aside>
+<div class="profile"></div>
+<h3><%= @user.name %></h3>
+<%= image_tag @user.image.url if @user.image? %>
+<li>プロフィール</li>
+<p><%= @user.self_introduction %></p>
+</div>
   
   
-  <div>
   <h5>このユーザーの投稿</h5>
   <% if @posts.any? %>
-  <ul>
   <% @posts.each do |post| %>
     <p><%= link_to image_tag(post.photo.url), post %></p>
   <% end %>
-  </ul>
   <%== pagy_bootstrap_nav(@pagy) %>
   <% end %>
   <% end %>
