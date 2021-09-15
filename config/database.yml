@@ -50,6 +50,8 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
   database: museum_production
   username: museum
   password: <%= ENV['MUSEUM_DATABASE_PASSWORD'] %>
