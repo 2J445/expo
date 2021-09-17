@@ -8,10 +8,15 @@
     <%= form_with(model: @user) do |f| %>
 
       <div class="mb-3">
+        <ul class="user-image">
         <%= image_tag @user.image.url if @user.image? %>
+        </ul>
+        <ul class="select-image">
         <%= f.file_field :image %>
+        </ul>
       </div>
       
+      <div class="edit-items">
       <div class="mb-3">
         <%= f.label :name, 'ユーザーネーム' %>
         <%= f.text_field :name, class: 'form-control' %>
@@ -39,5 +44,6 @@
 
       <%= f.submit '保存', class: 'btn btn-primary w-100' %>
     <% end %>
+    </div>
   </div>
 </div>

@@ -1,105 +1,82 @@
 <% if logged_in? %>
 <% if current_user == @post.user %>
-<p id="notice"><%= notice %></p>
-<div>
-<div>
-<p>
-  <%= image_tag @post.photo.url, size: '600x400' if @post.photo? %>
-</p>
+<div class="show-post">
+<p><%= image_tag @post.photo.url, size: '600x400' if @post.photo? %></p>
+
+
+<h4>作品名</h4>
+<p><%= @post.title  %></p>
+
+
+<div class="post-user">
+<h4>作者</h4>
+ <p><%= link_to @post.user.name,  user_path(@post.user)%></p>
+ </div>
+ 
+ 
+<div class="post-intorduction">
+<h4>詳細</h4>
+<p><%= @post.explanation %></p>
 </div>
 
-<div>
-<h3>作品名</h3>
-<p>
-  <%= @post.title  %>
-</p>
-</div>
 
-<div>
-<h3>詳細</h3>
-<p>
-  <%= @post.explanation %>
-</p>
-</div>
-
-<div>
-  <h3>作者</h3>
- <p>
-   <%= link_to @post.user.name,  user_path(@post.user)%>
- </p>
-</div>
-</div>
 
 <%= link_to '編集', edit_post_path(@post) %> |
 <%= link_to "削除", @post, method: :delete, data: { confirm: "削除しますか？" } %> |
 <%= link_to '戻る', '/' %>
 
+</div>
+
 <% else %>
-<p id="notice"><%= notice %></p>
-<dvi>
-<div>
-<p>
-  <%= image_tag @post.photo.url, size: '600x400' if @post.photo? %>
-</p>
+<div class="show-post">
+
+<p><%= image_tag @post.photo.url, size: '600x400' if @post.photo? %></p>
+
+<h4>作品名</h4>
+<p><%= @post.title %></p>
+
+<div class="post-user">
+<h4>作者</h4>
+ <p><%= link_to @post.user.name,  user_path(@post.user)%></p>
+ </div>
+ 
+ 
+<div class="post-intorduction">
+<h4>詳細</h4>
+<p><%= @post.explanation %></p>
 </div>
 
-<div>
-<h3>作品名</h3>
-<p>
-  <%= @post.title %>
-</p>
-</div>
 
-<div>
-<h3>詳細</h3>
-<p>
-  <%= @post.explanation %>
-</p>
-</div>
 
-<div>
-  <h3>作者</h3>
- <p>
-   <%= link_to @post.user.name,  user_path(@post.user)%>
- </p>
-</div>
 <%= render 'favorites/favorite_button', post: @post %>
-</dvi>
 
 <%= link_to '戻る', '/' %>
 <% end %>
+</div>
 
 <% else %>
+<div class="show-post">
+<p><%= image_tag @post.photo.url, size: '600x400' if @post.photo? %></p>
 
-<p id="notice"><%= notice %></p>
-<dvi>
-<div>
-<p>
-  <%= image_tag @post.photo.url, size: '600x400' if @post.photo? %>
-</p>
+
+<h4>作品名</h4>
+<p><%= @post.title  %></p>
+
+
+<div class="post-user">
+<h4>作者</h4>
+ <p><%= link_to @post.user.name,  user_path(@post.user)%></p>
+ </div>
+ 
+ 
+<div class="post-intorduction">
+<h4>詳細</h4>
+<p><%= @post.explanation %></p>
 </div>
 
-<div>
-<h3>作品名</h3>
-<p>
-  <%= @post.title %>
-</p>
-</div>
 
-<div>
-<h3>詳細</h3>
-<p>
-  <%= @post.explanation %>
-</p>
-</div>
-
-<div>
-  <h3>作者</h3>
- <p>
-   <%= link_to @post.user.name,  user_path(@post.user)%>
- </p>
-</div>
-</dvi>
 
 <%= link_to '戻る', '/' %>
+</div>
+
 <% end %>

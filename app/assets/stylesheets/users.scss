@@ -1,11 +1,528 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+//ユーザーページ
 .profile{
-    
-}
-@media screen and (min-width:900px){
-    .profile{
-        
+        text-align:center;
+        img{
+            border-radius: 50%;
+            width: 250px;
+            height:250px;
+        }
+        a{
+                font-size: 20px;
+            }
+        .profile-intorduction{
+            text-align: left;
+            width: 400px;
+            margin-top:10px;
+            margin-bottom: 20px;
+            margin-left: 90px;
+            padding-bottom:180px;
+            padding-left: 0px;
+            border: solid 1px gray;
+        }
     }
+    
+.follow-bar{
+        align-items:center;
+        width: 90%;
+        position:relative;
+        left: 6%;
+    }
+    
+//プロフィール編集
+    .user-image{
+        text-align: center;
+        img{
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+        }
+    }
+    .select-image{
+        text-align: center;
+    }
+    .edit-items{
+        text-align: center;
+    }
+
+    
+//フォロー
+.follow{
+        text-align:center;
+        margin-top:2%;
+     
+        .item{
+        text-align:center;
+        margin-top:30px;
+        position:relative;
+    	right: 0px;
+        }
+        ul{
+            text-align: left;
+            margin-left:0px;
+        }
+        img{
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+        .relationship-name{
+            margin-left:10px;
+        }
+        .relationship-introduction{
+            margin-top: 5px;
+            margin-left:10px;
+        }
+    }
+    
+//フォロワー
+.follower{
+        text-align:center;
+        margin-top:2%;
+       
+        .item{
+        text-align:center;
+        margin-top:30px;
+        position:relative;
+    	right: 0px;
+        }
+        ul{
+            text-align: left;
+            margin-left:0px;
+        }
+        img{
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+        .relationship-name{
+            margin-left:10px;
+        }
+        .relationship-introduction{
+            margin-top: 5px;
+            margin-left:10px;
+        }
+    }
+    
+//お気に入り
+.favorite{
+        text-align:center;
+        margin-top:2%;
+        
+        img{
+    	width: 320px;
+    	height: 200px;
+    }
+    }
+.my-posts{
+        text-align:center;
+        margin-top:2%;
+        
+        img{
+    	width: 320px;
+    	height: 200px;
+    }
+    }
+.user-posts{
+        text-align:center;
+        margin-top:2%;
+    }
+    
+.pagy{
+        margin:0 auto;
+        text-align:center;
+        padding: 0 auto;
+        margin-left: 180px;
+    }
+    
+    
+    
+//フォロー一覧
+.follow-list{
+        text-align:center;
+        margin-top:2%;
+     
+        .item{
+        text-align:center;
+        margin-top:30px;
+        position:relative;
+    	right: 0px;
+        }
+        ul{
+            text-align: left;
+            margin-left:0px;
+        }
+        img{
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+        .relationship-name{
+            margin-left:10px;
+        }
+        .relationship-introduction{
+            margin-top: 5px;
+            margin-left:10px;
+        }
+        .pagy{
+            margin-left: 160px;
+        }
+    }
+
+    
+//フォロワー一覧
+.follower-list{
+        text-align:center;
+        margin-top:2%;
+     
+        .item{
+        text-align:center;
+        margin-top:30px;
+        position:relative;
+    	right: 0px;
+        }
+        ul{
+            text-align: left;
+            margin-left:0px;
+        }
+        img{
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+        .relationship-name{
+            margin-left:10px;
+        }
+        .relationship-introduction{
+            margin-top: 5px;
+            margin-left:10px;
+        }
+        .pagy{
+            margin-left: 160px;
+        }
+}
+    
+//お気に入り一覧
+.favorite-list{
+    .post-box{
+            height: 180px;
+            border: solid 1px gray;
+            margin-bottom: 20px;
+    }
+    .like-post-information{
+            width: 100px;
+            text-align: left;
+            position:relative;
+            left: 250px;
+            bottom: 195px;
+            h5{
+                font-size: 15px;
+            }
+            p{
+            font-size: 12px;
+            width:270px;
+            height: 55px;
+            }
+            a{
+                text-decoration: none;
+            }
+        }
+    img{
+            width: 240px;
+            height: 180px;
+    }
+    .pagy{
+            text-align:center;
+    }
+}
+
+
+//PCサイズに変更
+@media (min-width:990px){
+    //ユーザーページ
+    .profile{
+        text-align:center;
+        img{
+            border-radius: 50%;
+            width: 250px;
+            height:250px;
+        }
+        a{
+                font-size: 15px;
+        }
+        .profile-intorduction{
+            text-align: left;
+            width: 660px;
+            margin-top:10px;
+            margin-bottom: 20px;
+            margin-left: 320px;
+            padding-bottom:100px;
+            padding-left: 0px;
+            border: solid 1px gray;
+            
+            
+        }
+    }
+    .follow-bar{
+        text-align: center;
+        width: 30%;
+        position:relative;
+        left: 36%;
+    }
+    
+    //フォロー
+    .follow{
+        text-align:center;
+        margin-top:2%;
+     
+        .item{
+        text-align:center;
+        margin-top:30px;
+        position:relative;
+    	right: 0px;
+        }
+        ul{
+            text-align: left;
+            margin-left:250px;
+        }
+        img{
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+        .relationship-name{
+            margin-left:10px;
+        }
+        .relationship-introduction{
+            margin-top: 5px;
+            margin-left:10px;
+        }
+    }
+    
+    //フォロワー
+    .follower{
+        text-align:center;
+        margin-top:2%;
+       
+        .item{
+        text-align:center;
+        margin-top:30px;
+        position:relative;
+    	right: 0px;
+        }
+        ul{
+            text-align: left;
+            margin-left:250px;
+        }
+        img{
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+        .relationship-name{
+            margin-left:10px;
+        }
+        .relationship-introduction{
+            margin-top: 5px;
+            margin-left:10px;
+        }
+    }
+    
+    
+    //お気に入り
+    .favorite{
+        text-align:center;
+        margin-top:2%;
+        .item{
+        text-align:center;
+        margin-top:30px;
+        position:relative;
+    	right: 0px;
+    }
+    }
+    .favorite-posts{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin-left: 0px;
+    
+   p{
+   	    margin-right: 0.5%;
+    	text-align: left;
+    	padding: 0 auto;
+    }
+    img{
+    	width: 280px;
+    	height: 180px;
+    }
+    }
+    .my-posts{
+         width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-left: 0px;
+    .item{
+        text-align:center;
+        margin-top:30px;
+        position:relative;
+    	right: 0px;
+        }
+    
+   p{
+    	text-align: left;
+    	padding: 0 auto;
+    }
+    img{
+    	width: 250px;
+    	height: 150px;
+    }
+    }
+   .user-posts{
+         width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-left: 0px;
+    .item{
+        text-align:center;
+        margin-top:30px;
+        position:relative;
+    	right: 0px;
+    }
+    
+   p{
+    	text-align: left;
+    	padding: 0 auto;
+    }
+    img{
+    	width: 250px;
+    	height: 150px;
+    }
+    }
+    .pagy{
+        margin:0 auto;
+        text-align:center;
+        padding: 0 auto;
+        margin-left: 560px;
+    }
+    //プロフィール編集
+    .user-image{
+        text-align: center;
+        img{
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+        }
+    }
+    .select-image{
+        text-align: center;
+    }
+    .edit-items{
+        text-align: center;
+    }
+    
+    //フォロー一覧
+    .follow-list{
+        text-align:center;
+        margin-top:2%;
+     
+        .item{
+        text-align:center;
+        margin-top:30px;
+        position:relative;
+    	right: 0px;
+        }
+        ul{
+            text-align: left;
+            margin-left:250px;
+        }
+        img{
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+        .relationship-name{
+            margin-left:10px;
+        }
+        .relationship-introduction{
+            margin-top: 5px;
+            margin-left:10px;
+        }
+        .pagy{
+            margin-left: 280px;
+        }
+    }
+    
+    
+    //フォロワー一覧
+    .follower-list{
+        text-align:center;
+        margin-top:2%;
+     
+        .item{
+        text-align:center;
+        margin-top:30px;
+        position:relative;
+    	right: 0px;
+        }
+        ul{
+            text-align: left;
+            margin-left:250px;
+        }
+        img{
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+        .relationship-name{
+            margin-left:10px;
+        }
+        .relationship-introduction{
+            margin-top: 5px;
+            margin-left:10px;
+        }
+        .pagy{
+            margin-left: 280px;
+        }
+    }
+    
+    //お気に入り一覧
+    .favorite-list{
+        .post-box{
+            height: 200px;
+            border: solid 1px gray;
+            margin-bottom: 20px;
+        }
+        .like-post-information{
+            width: 400px;
+            text-align: left;
+            position:relative;
+            left: 310px;
+            bottom: 210px;
+        h5{
+                font-size: 18x;
+        }
+        p{
+                font-size: 18px;
+            width:980px;
+            height: 50px;
+        }
+        a{
+                text-decoration: none;
+        }
+        }
+        
+        img{
+            width: 300px;
+            height: 200px;
+        }
+        .pagy{
+            text-align:center;
+        }
+    }
+    
 }

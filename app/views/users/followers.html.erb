@@ -1,3 +1,7 @@
-<h3>フォロワー</h3>
+<div class="follower-list">
+<h3>フォロワー一覧</h3>
 <%= render 'users', users: @followers %>
-<%== pagy_bootstrap_nav(@pagy) %>
+    <ul class= "pagy">
+      <%== pagy_bootstrap_nav(@pagy) %>
+    </ul>
+</div>

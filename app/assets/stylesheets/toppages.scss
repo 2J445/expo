@@ -1,16 +1,13 @@
 // Place all the styles related to the toppages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.flex-container {
-	display: flex;
-	justify-content: space-around; /*--justify-contentを指定--*/
-}
 
 /*--子要素--*/
 .flex-item {/*--装飾省略--*/}
-.SP_Flex_container{
-    width: 100%;
-    margin: 10px auto;
+.flex-container{
+    width: 0px;
+    margin-top: 20px;
+    margin-left: 120px;
     
     p{
     	margin-bottom: 1%;
@@ -18,43 +15,49 @@
         text-align: center;
         width: 50%;
     }
-    
     img{
-	   width: 250px;
-       height: 180px;
+        margin-bottom: 10px;
+	   width: 330px;
+       height: 200px;
        }
 }
 
-.user{
-    width: 100%;
-    margin: 10px auto;
-    
+.users{
+    width: 0px;
+    margin: 10px;
     p{
 	    margin-bottom: 1%;
         display: block;
         text-align: center;
         width: 50%;
+        margin-left: 150px;
     }
     
     img{
+        margin-top: 10px;
     	border-radius: 50%;
         	width: 250px;
     	    height: 250px;
         }
-}
-
     
-@media screen and (min-width:900px){
-    .SP_Flex_container{
+}
+.item{
+        text-align:center;
+        margin-top:30px;
+        margin-left: 20px;
+    }
+    
+@media  (min-width:990px){
+    .flex-container{
+        width: 100%;
         display: flex;
         justify-content: space-around;
+        margin-left: 0px;
     
    p{
    	    margin-right: 0.5%;
     	text-align: left;
     	padding: 0 auto;
-    	position:relative;
-    	right:1.2%;
     }
     img{
     	width: 280px;
@@ -62,15 +65,15 @@
     }
     }
     
-    .user{
+    .users{
+        width: 20%;
         display: flex;
         justify-content: space-around;
+        margin-left: 400px;
     p{
     	margin-right: 1%;
     	text-align: left;
     	padding: 0 auto;
-    	position:relative;
-    	right:1.2%;
     }
     img{
     	border-radius: 50%;
@@ -79,7 +82,10 @@
     }
     }
     .item{
+    	text-align:left;
+    	margin-top:30px;
+    	margin-left: 0px;
     	position:relative;
-    	right:5%;
+    	right: 60px;
     }
 }

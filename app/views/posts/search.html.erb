@@ -1,18 +1,19 @@
 <%= render 'toppages/search', q: @q, url: search_path %>
-<div class="row">
-      <div>
-      <% @search_posts.each do |post| %>
-      <div class="card">
-            <p><%= link_to image_tag(post.photo.url), post %></p>
-            <div class="card-items">
-                  <li>作品名</li>
-                  <p><%= link_to post.title, post %></p>
-                  <li>説明文</li>
-                  <p><%= post.explanation %></p>
-                  <li>作者</li>
-                  <p><%= link_to post.user.name,  user_path(post.user)%></p>
-            </div>
-      </div>
-      <% end %>
-      <%== pagy_bootstrap_nav(@pagy) %>
+<div class="search-list">
+<% @search_posts.each do |post| %>
+<div class="post-box">
+<p><%= link_to image_tag(post.photo.url), post, size: '300x600' %></p>
+
+<div class="search-post-information">
+<h5>作品名</h5>
+<p><%= post.title %></p>
+
+<h5>作者</h5>
+<p><%= link_to post.user.name %></p>
+</div>
+</div>
+<% end %>
+<ul class="pagy">
+<%== pagy_bootstrap_nav(@pagy) %>
+</ul>
 </div>

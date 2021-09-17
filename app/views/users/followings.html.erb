@@ -1,3 +1,7 @@
-<h3>フォローユーザー</h3>
+<div class="follow-list">
+<h3>フォロー一覧</h3>
 <%= render 'users', users: @followings %>
-<%== pagy_bootstrap_nav(@pagy) %>
+<ul class= "pagy">
+    <%== pagy_bootstrap_nav(@pagy) %>
+</ul>
+</div>

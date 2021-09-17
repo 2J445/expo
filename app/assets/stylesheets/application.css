@@ -13,4 +13,41 @@
  *= require_tree .
  *= require_self
  */
-body{margin: 0 auto;}
+body{
+    margin-top:0;
+    margin-right:0;
+    margin-left:0;
+}
+
+.navbar-nav{
+    font-size: 18px;
+    position:relative;
+    top: 5px;
+    right: 15px;
+}
+.btn{
+    font-size: 18px;
+    position:relative;
+    top: 2px;
+    right: 10px;
+}
+    
+@media  (min-width:990px){
+    body{
+    margin-top:0;
+    margin-right:0;
+    margin-left:0;
+    }
+    .navbar-nav{
+        font-size: 16px;
+        position:relative;
+        top: 6px;
+        right: 0px;
+    }
+    .btn{
+        font-size: 16px;
+        position:relative;
+        top: 3px;
+        right: 0px;
+    }
+}

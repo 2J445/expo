@@ -3,5 +3,5 @@ class Post < ApplicationRecord
     mount_uploader :photo, PhotoUploader
     
     validates :title, presence: true, length: { maximum: 50 }
-    validates :explanation, presence: false, length: { maximum: 100 }
+    validates :explanation, presence: false, length: { maximum: 240 }
 end
