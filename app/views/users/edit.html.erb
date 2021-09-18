@@ -6,7 +6,7 @@
   <div class="col-sm-6 offset-sm-3">
 
     <%= form_with(model: @user) do |f| %>
-
+    <%= render 'layouts/error_messages', model: f.object %>
       <div class="mb-3">
         <ul class="user-image">
         <%= image_tag @user.image.url if @user.image? %>
