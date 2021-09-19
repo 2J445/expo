@@ -146,6 +146,26 @@
             text-align:center;
     }
 }
+
+//エラーメッセージ
+    #error_explanation{
+        text-align: center;
+        margin-left: 60px;
+    }
+    .photo{
+        .field_with_errors{
+        position:relative;
+        left: 150px;
+    }
+    }
+    .title{
+        .field_with_errors{
+        position:relative;
+        left: 100px;
+        }
+    }
+    
+    
     
 @media  (min-width:990px){
     .show-post{
@@ -292,6 +312,25 @@
             text-align:center;
         }
     }
+    
+    //エラーメッセージ
+    #error_explanation{
+        text-align: center;
+        margin-left: 440px;
+    }
+    .photo{
+        .field_with_errors{
+        position:relative;
+        left: 500px;
+    }
+    }
+    .title{
+        .field_with_errors{
+        position:relative;
+        left: 470px;
+        }
+    }
+    
     
 }
 

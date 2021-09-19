@@ -239,6 +239,16 @@
     }
 }
 
+//サインアップのエラーメッセージ
+#error_explanation{
+    position:relative;
+    right:20px;
+}
+.mb-3{
+    .field_with_errors{
+        width:550px;
+    }
+}
 
 //PCサイズに変更
 @media (min-width:990px){
@@ -525,4 +535,15 @@
         }
     }
     
+//サインアップのエラーメッセージ
+#error_explanation{
+    position:relative;
+    right:330px;
+}
+.mb-3{
+    .field_with_errors{
+        width:630px;
+    }
+}
+
 }

@@ -1,8 +1,7 @@
- <% if @user.id == current_user.id %>
+
 <h1>編集ページ</h1>
 
 <%= render 'form', post: @post %>
 
 <%= link_to '見る', @post %> |
 <%= link_to '戻る', posts_path %>
-<% end %>

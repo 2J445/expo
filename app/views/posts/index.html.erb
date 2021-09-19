@@ -9,11 +9,9 @@
      <p><%= post.title %></p>
 
     <h5>作者</h5>
-    <p><%= link_to post.user.name %></p>
+    <p><%= link_to post.user.name, user_path(post.user) %></p>
     </div>
     </div>
       <% end %>
-      <ul class="pagy">
-<%== pagy_bootstrap_nav(@pagy) %>
-</ul>
+      <%== pagy_bootstrap_nav(@pagy) %>
 </div>
