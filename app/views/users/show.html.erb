@@ -9,7 +9,7 @@
 <h3><%= @user.name %></h3>
 <li>プロフィール</li>
 <ul class="profile-intorduction">
-<p><%= @user.self_introduction.gsub(/\n/, '<br/>') %></p>
+<p><%= simple_format(@user.self_introduction) %></p>
 </ul>
 <%= link_to "編集", edit_user_path(current_user) %>
 </div>
@@ -73,7 +73,7 @@
 
 <li>プロフィール</li>
 <ul class="profile-intorduction">
-<p><%= @user.self_introduction.gsub(/\n/, '<br/>') %></p>
+<p><%= simple_format(@user.self_introduction) %></p>
 </ul>
 <div class="follow-bar"><%= render 'relationships/follow_button',  user: @user%></div>
 </div>
@@ -108,7 +108,7 @@
 
 <li>プロフィール</li>
 <ul class="profile-intorduction">
-<p><%= @user.self_introduction.gsub(/\n/, '<br/>') %></p>
+<p><%= simple_format(@user.self_introduction) %></p>
 </ul>
 </div>
   
