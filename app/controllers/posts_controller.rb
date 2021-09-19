@@ -21,6 +21,12 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+  @post = Post.find(params[:id])
+    if @post.user == current_user
+      render "edit"
+    else
+      redirect_to posts_path
+    end
   end
 
   # POST /posts or /posts.json
