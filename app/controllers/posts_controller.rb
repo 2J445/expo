@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy ]
-  before_action :current_user, only: [:destroy, :edit]
+  before_action :current_user, only: [:destroy, :edit, :new]
   before_action :require_user_logged_in, only: [:edit]
   before_action :set_search
 
@@ -17,6 +17,9 @@ class PostsController < ApplicationController
   # GET /posts/new
   def new
     @post = Post.new
+    if @post.user == current_user
+      redirect_to '/'
+    end
   end
 
   # GET /posts/1/edit

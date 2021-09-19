@@ -150,18 +150,26 @@
 //エラーメッセージ
     #error_explanation{
         text-align: center;
-        margin-left: 60px;
+        position:relative;
+        left: 50px;
     }
     .photo{
         .field_with_errors{
         position:relative;
-        left: 150px;
+        left: 120px;
     }
     }
     .title{
         .field_with_errors{
         position:relative;
-        left: 100px;
+        left: 90px;
+        }
+    }
+    .introduction{
+        .field_with_errors{
+            text-align: center;
+            position:relative;
+            left: 90px;
         }
     }
     
@@ -316,7 +324,8 @@
     //エラーメッセージ
     #error_explanation{
         text-align: center;
-        margin-left: 440px;
+        position:relative;
+        left: 420px;
     }
     .photo{
         .field_with_errors{
@@ -330,7 +339,13 @@
         left: 470px;
         }
     }
-    
+    .introduction{
+        .field_with_errors{
+            text-align: center;
+            position:relative;
+            left: 470px;
+        }
+    }
     
 }
 
