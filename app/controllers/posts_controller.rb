@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy ]
-  before_action :current_user, only: [:destroy]
+  before_action :current_user, only: [:destroy, :edit]
+  before_action :require_user_logged_in, only: [:edit]
   before_action :set_search
 
 
