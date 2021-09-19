@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   
   get 'signup', to: 'users#new'
   get 'search', to: 'posts#search'
+  get 'overview', to: 'toppages#overview'
   resources :users do
     member do
       get :followings
