@@ -15,9 +15,10 @@
     
 .post-intorduction{
         p{
+            height: 450px;
              text-align: left;
-            margin-left: 80px;
-            width: 400px;
+            margin-left: 60px;
+            width: 450px;
             border: solid 1px gray;
             padding-bottom: 100px;
             font-size: 15px;
@@ -168,10 +169,15 @@
     }
 
 //お気に入り
-.favorite-button{
-    .btn{
-        margin-left: 20px;
+.show-post{
+    form{
+        position: relative;
+        left: 240px;
+        width: 130px;
         margin-bottom: 20px;
+    }
+    .back{
+        margin-left: 10px;
     }
 }
     
@@ -191,6 +197,7 @@
     }
     .post-intorduction{
         p{
+            height: 450px;
             text-align: left;
             margin-left: 350px;
             width: 620px;
@@ -343,10 +350,15 @@
         }
     }
     //お気に入り
-    .favorite-button{
-        .btn{
-            margin-left: 0px;
+    .show-post{
+        form{
+            position: relative;
+            left: 600px;
+            width: 130px;
             margin-bottom: 20px;
+        }
+        .back{
+            margin-left: 10px;
         }
     }
 }
