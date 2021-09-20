@@ -5,10 +5,10 @@ class PhotoUploader < CarrierWave::Uploader::Base
   process resize_and_pad: [300, 200, "#ffffff", "Center"]
 
   # Choose what kind of storage to use for this uploader:
- if Rails.env.production?
-    include Cloudinary::CarrierWave
+ if Rails.env.development?
+  storage :file
  else
-    storage :file
+i  nclude Cloudinary::CarrierWave
  end
   # storage :fog
 
