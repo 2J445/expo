@@ -8,7 +8,7 @@ class PhotoUploader < CarrierWave::Uploader::Base
  if Rails.env.development?
   storage :file
  else
-i  nclude Cloudinary::CarrierWave
+  include Cloudinary::CarrierWave
  end
   # storage :fog
 
