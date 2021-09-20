@@ -48,7 +48,7 @@ class UsersController < ApplicationController
 
     if @user.update(user_params)
       flash[:success] = '正常に更新されました'
-      render :edit
+      redirect_to @user
     else
       flash.now[:danger] = '更新されませんでした'
       render :edit
