@@ -148,30 +148,32 @@
 }
 
 //エラーメッセージ
-    #error_explanation{
-        text-align: center;
-        position:relative;
-        left: 50px;
+    #post_error_explanation{
+        width: 380px;
+        padding-top: 10px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+        padding-left: 0px;
+        margin-left: 80px;
     }
     .photo{
         .field_with_errors{
-        position:relative;
-        left: 120px;
-    }
+            margin-left: 130px;
+        }
     }
     .title{
         .field_with_errors{
-        position:relative;
-        left: 90px;
+            margin-left: 100px;
         }
     }
-    .introduction{
-        .field_with_errors{
-            text-align: center;
-            position:relative;
-            left: 90px;
-        }
+
+//お気に入り
+.favorite-button{
+    .btn{
+        margin-left: 20px;
+        margin-bottom: 20px;
     }
+}
     
     
     
@@ -322,30 +324,30 @@
     }
     
     //エラーメッセージ
-    #error_explanation{
-        text-align: center;
-        position:relative;
-        left: 420px;
+    #post_error_explanation{
+        width: 400px;
+        padding-top: 10px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+        padding-left: 0px;
+        margin-left: 450px;
     }
     .photo{
         .field_with_errors{
-        position:relative;
-        left: 500px;
-    }
+            margin-left: 500px;
+        }
     }
     .title{
         .field_with_errors{
-        position:relative;
-        left: 470px;
+            margin-left: 470px;
         }
     }
-    .introduction{
-        .field_with_errors{
-            text-align: center;
-            position:relative;
-            left: 470px;
+    //お気に入り
+    .favorite-button{
+        .btn{
+            margin-left: 0px;
+            margin-bottom: 20px;
         }
     }
-    
 }
 

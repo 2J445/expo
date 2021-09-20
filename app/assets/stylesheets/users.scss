@@ -26,10 +26,12 @@
     }
     
 .follow-bar{
-        align-items:center;
-        width: 90%;
+        width: 150px;
+        height: 20px;
         position:relative;
-        left: 6%;
+        left: 220px;
+        bottom: 0px;
+        margin-bottom: 40px;
     }
     
 //プロフィール編集
@@ -240,15 +242,21 @@
 }
 
 //サインアップのエラーメッセージ
-#error_explanation{
-    position:relative;
-    right:20px;
-}
-.mb-3{
-    .field_with_errors{
-        width:550px;
+.field_with_errors{
+    label{
+        color: white;
     }
 }
+#user_name{
+    width: 540px;
+}
+#user_email{
+    width: 540px;
+}
+#user_password{
+    width: 540px;
+}
+
 
 //PCサイズに変更
 @media (min-width:990px){
@@ -277,10 +285,12 @@
         }
     }
     .follow-bar{
-        text-align: center;
-        width: 30%;
+        width: 150px;
+        height: 20px;
         position:relative;
-        left: 36%;
+        left: 830px;
+        bottom: 60px;
+         margin-bottom: 10px;
     }
     
     //フォロー
@@ -536,14 +546,19 @@
     }
     
 //サインアップのエラーメッセージ
-#error_explanation{
-    position:relative;
-    right:330px;
-}
-.mb-3{
-    .field_with_errors{
-        width:630px;
+.field_with_errors{
+    label{
+        color: white;
     }
+}
+#user_name{
+    width: 630px;
+}
+#user_email{
+    width: 630px;
+}
+#user_password{
+    width: 630px;
 }
 
 }

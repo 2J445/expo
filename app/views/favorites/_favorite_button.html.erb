@@ -1,4 +1,5 @@
 <% if current_user.is_favorite?(post) %>
+<dvi class="favorite-button">
    <%= form_with(model: current_user.favorites.find_by(post_id: post.id), local: true, method: :delete) do |f| %>
       <%= hidden_field_tag :post_id, post.id %>
       <%= f.submit 'お気に入り解除', class: 'btn btn-danger btn-sm' %>
@@ -8,4 +9,5 @@
     <%= hidden_field_tag :post_id, post.id %>
       <%= f.submit 'お気に入り', class: 'btn btn-primary btn-sm' %>
       <% end %>
+      </dvi>
 <% end %>

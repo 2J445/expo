@@ -1,12 +1,13 @@
 <% if logged_in? %>
 <% if @current_user == @user %>
 <div class="profile">
+  <h3><%= @user.name %></h3>
 <% if  @user.image.present? %>
   <p><%= link_to image_tag(@user.image.url) if @user.image? %></p>
 <% else %>
   <p><%= link_to image_tag(gravatar_url(@user)) %></p>
 <% end %>
-<h3><%= @user.name %></h3>
+
 <li>プロフィール</li>
 <ul class="profile-intorduction">
 <p><%= simple_format(@user.self_introduction) %></p>
@@ -64,18 +65,18 @@
 <% else %>
 
 <div class="profile">
+  <h3><%= @user.name %></h3>
 <% if  @user.image.present? %>
   <p><%= link_to image_tag(@user.image.url) if @user.image? %></p>
 <% else %>
   <p><%= link_to image_tag(gravatar_url(@user)) %></p>
 <% end %>
-<h3><%= @user.name %></h3>
 
+<div class="follow-bar"><%= render 'relationships/follow_button',  user: @user%></div>
 <li>プロフィール</li>
 <ul class="profile-intorduction">
 <p><%= simple_format(@user.self_introduction) %></p>
 </ul>
-<div class="follow-bar"><%= render 'relationships/follow_button',  user: @user%></div>
 </div>
   
   
@@ -100,6 +101,7 @@
 
 <% else %>
 <div class="profile">
+  <h3><%= @user.name %></h3>
 <% if  @user.image.present? %>
   <p><%= link_to image_tag(@user.image.url) if @user.image? %></p>
 <% else %>
