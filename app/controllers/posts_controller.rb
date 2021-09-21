@@ -3,6 +3,8 @@ class PostsController < ApplicationController
   before_action :current_user, only: [:destroy, :edit, :new]
   before_action :require_user_logged_in, only: [:edit]
   before_action :set_search
+  #before_action :correct_user, only: [:edit, :new]
+  
 
 
   # GET /posts or /posts.json
