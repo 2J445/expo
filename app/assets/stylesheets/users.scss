@@ -57,69 +57,70 @@
         text-align: center;
     }
 
-    
+
 //フォロー
-.follow{
-        text-align:center;
-        margin-top:2%;
-     
-        .item{
-        text-align:center;
-        margin-top:30px;
-        position:relative;
-    	right: 0px;
-        }
-        ul{
-            text-align: left;
-            margin-left:0px;
-        }
-        img{
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-        }
-        .relationship-name{
-            margin-left:10px;
-        }
-        .relationship-introduction{
-            margin-top: 5px;
-            margin-left:10px;
-        }
+    .follow{
+      .item{
+          text-align: center;
+          margin-left: 0px;
+          margin-bottom: 20px;
+       }
     }
+    
     
 //フォロワー
-.follower{
-        text-align:center;
-        margin-top:2%;
-       
-        .item{
-        text-align:center;
-        margin-top:30px;
-        position:relative;
-    	right: 0px;
+    .follower{
+      .item{
+          text-align: center;
+          margin-left: 0px;
+          margin-bottom: 20px;
         }
-        ul{
-            text-align: left;
-            margin-left:0px;
-        }
-        img{
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-        }
-        .relationship-name{
-            margin-left:10px;
-        }
-        .relationship-introduction{
-            margin-top: 5px;
-            margin-left:10px;
-        }
+     }
+ 
+//ユーザーリスト  
+.user-list{
+    width: 520px;
+    height: 140px;
+    border: solid 1px gray;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    img{
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        margin-top: 10px;
+        margin-left: 10px
     }
-    
+    a{
+        background-color: white;
+    }
+    p{
+        width: 350px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    h5{
+        width: 300px;
+    }
+    .user-box{
+        width: 300px;
+        position: relative;
+        bottom: 130px;
+        left: 150px;
+    }
+}   
+
+
 //お気に入り
 .favorite{
         text-align:center;
         margin-top:2%;
+        .item{
+        text-align:center;
+    margin-bottom: 20px;
+        margin-top:30px;
+    }
         
         img{
     	width: 320px;
@@ -148,72 +149,6 @@
     }
     
     
-    
-//フォロー一覧
-.follow-list{
-        text-align:center;
-        margin-top:2%;
-     
-        .item{
-        text-align:center;
-        margin-top:30px;
-        position:relative;
-    	right: 0px;
-        }
-        ul{
-            text-align: left;
-            margin-left:0px;
-        }
-        img{
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-        }
-        .relationship-name{
-            margin-left:10px;
-        }
-        .relationship-introduction{
-            margin-top: 5px;
-            margin-left:10px;
-        }
-        .pagy{
-            margin-left: 160px;
-        }
-    }
-
-    
-//フォロワー一覧
-.follower-list{
-        text-align:center;
-        margin-top:2%;
-     
-        .item{
-        text-align:center;
-        margin-top:30px;
-        position:relative;
-    	right: 0px;
-        }
-        ul{
-            text-align: left;
-            margin-left:0px;
-        }
-        img{
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-        }
-        .relationship-name{
-            margin-left:10px;
-        }
-        .relationship-introduction{
-            margin-top: 5px;
-            margin-left:10px;
-        }
-        .pagy{
-            margin-left: 160px;
-        }
-}
-    
 //お気に入り一覧
 .favorite-list{
     .post-box{
@@ -232,8 +167,12 @@
             }
             p{
             font-size: 12px;
-            width:270px;
-            height: 55px;
+            width:260px;
+            height: 30px;
+            margin-bottom: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
             }
             a{
                 text-decoration: none;
@@ -305,63 +244,58 @@
          margin-bottom: 10px;
     }
     
-    //フォロー
+//フォロー
     .follow{
-        text-align:center;
-        margin-top:2%;
-     
-        .item{
-        text-align:center;
-        margin-top:30px;
-        position:relative;
-    	right: 0px;
-        }
-        ul{
-            text-align: left;
-            margin-left:250px;
-        }
-        img{
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-        }
-        .relationship-name{
-            margin-left:10px;
-        }
-        .relationship-introduction{
-            margin-top: 5px;
-            margin-left:10px;
-        }
+      .item{
+          text-align: center;
+          margin-left: 140px;
+          margin-bottom: 20px;
+       }
     }
-    
-    //フォロワー
+
+//フォロワー
     .follower{
-        text-align:center;
-        margin-top:2%;
-       
-        .item{
-        text-align:center;
-        margin-top:30px;
-        position:relative;
-    	right: 0px;
+      .item{
+          text-align: center;
+          margin-left: 140px;
+          margin-bottom: 20px;
         }
-        ul{
-            text-align: left;
-            margin-left:250px;
-        }
-        img{
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-        }
-        .relationship-name{
-            margin-left:10px;
-        }
-        .relationship-introduction{
-            margin-top: 5px;
-            margin-left:10px;
-        }
+     }
+
+//ユーザーリスト
+.user-list{
+    width: 900px;
+    height: 140px;
+    border: solid 1px gray;
+    margin-left: 220px;
+    margin-bottom: 10px;
+    img{
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        margin-top: 10px;
+        margin-left: 10px
     }
+    a{
+        background-color: white;
+    }
+    p{
+        width: 720px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    h5{
+        width: 300px;
+    }
+    .user-box{
+         width: 300px;
+        position: relative;
+        bottom: 130px;
+        left: 150px;
+    }
+}
+    
     
     
     //お気に入り
@@ -370,6 +304,7 @@
         margin-top:2%;
         .item{
         text-align:center;
+    margin-bottom: 20px;
         margin-top:30px;
         position:relative;
     	right: 0px;
@@ -457,71 +392,6 @@
         text-align: center;
     }
     
-    //フォロー一覧
-    .follow-list{
-        text-align:center;
-        margin-top:2%;
-     
-        .item{
-        text-align:center;
-        margin-top:30px;
-        position:relative;
-    	right: 0px;
-        }
-        ul{
-            text-align: left;
-            margin-left:250px;
-        }
-        img{
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-        }
-        .relationship-name{
-            margin-left:10px;
-        }
-        .relationship-introduction{
-            margin-top: 5px;
-            margin-left:10px;
-        }
-        .pagy{
-            margin-left: 280px;
-        }
-    }
-    
-    
-    //フォロワー一覧
-    .follower-list{
-        text-align:center;
-        margin-top:2%;
-     
-        .item{
-        text-align:center;
-        margin-top:30px;
-        position:relative;
-    	right: 0px;
-        }
-        ul{
-            text-align: left;
-            margin-left:250px;
-        }
-        img{
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-        }
-        .relationship-name{
-            margin-left:10px;
-        }
-        .relationship-introduction{
-            margin-top: 5px;
-            margin-left:10px;
-        }
-        .pagy{
-            margin-left: 280px;
-        }
-    }
-    
     //お気に入り一覧
     .favorite-list{
         .post-box{
@@ -540,9 +410,13 @@
         }
         p{
                 font-size: 18px;
-            width:980px;
-            height: 50px;
-        }
+                width:920px;
+                height: 30px;
+                margin-bottom: 10px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
         a{
                 text-decoration: none;
         }

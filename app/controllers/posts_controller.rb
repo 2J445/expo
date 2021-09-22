@@ -91,8 +91,6 @@ class PostsController < ApplicationController
       end
     end
     
-    
-    
     def set_search
       @q = Post.ransack(params[:q])
     end

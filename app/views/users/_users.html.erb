@@ -1,28 +1,19 @@
 <% if users.any? %>
-<div class="user-list">
-  <ul class="list-unstyled">
+<div class="relationships-list">
     <% users.each do |user| %>
-      <li class="mb-3 d-flex">
+    <div class="user-list">
         <% if  user.image.present? %>
-        <div class="relationship-images">
-      <p><%= link_to image_tag(user.image.url), user_path(user) if user.image? %></p>
-      </div>
-    <% else %>
-    <div class="relationship-images">
-      <p><%= link_to image_tag(gravatar_url(@user)) %></p>
-      </div>
-    <% end %>
-        <div>
-          <div class="relationship-name">
+           <p><%= link_to image_tag(user.image.url), user_path(user) if user.image? %></p>
+        <% else %>
+           <p><%= link_to image_tag(gravatar_url(@user)) %></p>
+         <% end %>
+         <div class="user-box">
+            <h5>ユーザー名</h5>
             <%= link_to user.name, user_path(user)  %>
+            <h5>プロフィール名</h5>
+            <p><%= user.self_introduction %></p>
           </div>
-          <div class="relationship-introduction">
-            <%= user.self_introduction %>
-          </div>
-        </div>
-      </li>
-      
+    </div>
     <% end %>
-  </ul>
-  </div>
+</div>
 <% end %>
