@@ -14,27 +14,24 @@
 }
     
 .post-intorduction{
+    .post-introduction-p{
+        border: solid 1px gray;
+        margin-left: 80px;
+        margin-bottom: 20px;
+        width: 400px;
+        height:600px;
         p{
-            height: 450px;
-             text-align: left;
-            margin-left: 60px;
-            width: 450px;
-            border: solid 1px gray;
-            padding-top: 5px;
-            padding-left: 5px;
-            padding-right: 5px;
-            padding-bottom: 100px;
-            font-size: 15px;
-            word-break : break-all;
+            text-align: left;
+            width: 380px;
+            margin-left: 10px;
+            margin-top: 10px;
         }
+    }
 }
     
 .post-user{
         p{
             font-size: 15px;
-        }
-        a{
-            text-decoration:none;
         }
 }
 
@@ -74,6 +71,15 @@
     .pagy{
             text-align:center;
     }
+    
+    //検索結果が無い時
+        .search-nil{
+            margin-top: 20px;
+            margin-bottom: 500px;
+            p{
+                font-size: 20px;
+            }
+        }
 }
 
 //投稿フォーム
@@ -115,6 +121,7 @@
         
         .actions{
             margin-top: 20px;
+            margin-left: 20px;
             input{
                 width: 350px;
                 height:40px;
@@ -179,6 +186,12 @@
             margin-left: 100px;
         }
     }
+    .introduction{
+        .field_with_errors{
+            margin-left: 100px;
+        }
+    }
+    
 
 //お気に入り
 .show-post{
@@ -208,26 +221,24 @@
         }
     }
     .post-intorduction{
-        p{
-            height: 450px;
-            text-align: left;
-            margin-left: 350px;
-            width: 620px;
+        .post-introduction-p{
             border: solid 1px gray;
-            padding-top: 5px;
-            padding-left: 5px;
-            padding-right: 5px;
-            padding-bottom: 100px;
-            font-size: 15px;
-            word-break : break-all;
+            margin-left: 350px;
+            margin-bottom: 20px;
+            width: 600px;
+            height:500px;
+            p{
+                text-align: left;
+                width: 580px;
+                margin-left: 10px;
+                margin-top: 10px;
+            }
         }
+        
     }
     .post-user{
         p{
             font-size: 15px;
-        }
-        a{
-            text-decoration:none;
         }
     }
     //検索一覧
@@ -266,6 +277,15 @@
         }
         .pagy{
             text-align:center;
+        }
+        
+        //検索結果が無い時
+        .search-nil{
+            margin-top: 20px;
+            margin-bottom: 500px;
+            p{
+                font-size: 20px;
+            }
         }
     }
     
@@ -308,6 +328,7 @@
         
         .actions{
             margin-top: 20px;
+            margin-left: 0px;
             input{
                 width: 350px;
                 height:40px;
@@ -369,6 +390,11 @@
         }
     }
     .title{
+        .field_with_errors{
+            margin-left: 470px;
+        }
+    }
+    .introduction{
         .field_with_errors{
             margin-left: 470px;
         }

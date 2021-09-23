@@ -16,7 +16,16 @@
 </div>
 </div>
 <% end %>
+
+<% if @post.nil? %>
+  <div class="search-nil">
+  <p>お探しの作品は見つかりませんでした</p>
+  </div>
+<% end %>
+
 <div class="pagy">
 <%== pagy_bootstrap_nav(@pagy) %>
 </div>
+
 </div>
+
