@@ -155,20 +155,24 @@
             height: 180px;
             border: solid 1px gray;
             margin-bottom: 20px;
+            img{
+                width: 300px;
+                height: 178px;
+            }
     }
     .like-post-information{
             width: 100px;
             text-align: left;
             position:relative;
-            left: 250px;
-            bottom: 195px;
+            left: 310px;
+            bottom: 190px;
             h5{
                 font-size: 15px;
             }
             p{
             font-size: 12px;
-            width:260px;
-            height: 30px;
+            width:230px;
+            height: 20px;
             margin-bottom: 5px;
             white-space: nowrap;
             overflow: hidden;
@@ -398,6 +402,10 @@
             height: 200px;
             border: solid 1px gray;
             margin-bottom: 20px;
+            img{
+                width: 300px;
+                height: 198px;
+            }
         }
         .like-post-information{
             width: 400px;
