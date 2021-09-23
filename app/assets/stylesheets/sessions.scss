@@ -1,3 +1,24 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+//ログインページ
+.login-button{
+    width: 555px;
+    margin-left: 10px;
+}
+.singup-introduction{
+    margin-top: 20px;
+}
+    
+
+@media (min-width:990px){
+    //ログインページ
+    .login-button{
+        width: 640px;
+         margin-left: 0px;
+    }
+    .singup-introduction{
+        margin-top: 20px;
+    }
+}

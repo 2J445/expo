@@ -8,12 +8,12 @@
     <%= form_with(model: @user) do |f| %>
     <%= render 'layouts/edit_error_messages', model: f.object %>
       <div class="mb-3">
-        <ul class="user-image">
+        <div class="user-image">
         <%= image_tag @user.image.url if @user.image? %>
-        </ul>
-        <ul class="select-image">
+        </div>
+        <div class="select-image">
         <%= f.file_field :image %>
-        </ul>
+        </div>
       </div>
       
       <div class="edit-items">

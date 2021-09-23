@@ -9,9 +9,9 @@
 <% end %>
 
 <li>プロフィール</li>
-<ul class="profile-intorduction">
+<div class="profile-intorduction">
 <p><%= simple_format(@user.self_introduction) %></p>
-</ul>
+</div>
 <%= link_to "編集", edit_user_path(current_user) %>
 </div>
   
@@ -36,11 +36,11 @@
      <h5>お気に入り作品</h5>
      <%= link_to 'お気に入り一覧', likes_user_path(@user) %>
      </div>
-     <ul class="favorite-posts">
+     <div class="favorite-posts">
      <% @likes.each do |post| %>
        <p><%= link_to image_tag(post.photo.url), post, size: '300x600' %></p>
      <% end %>
-     </ul>
+     </div>
    </div>
   
   <div class="my-posts">
@@ -48,14 +48,14 @@
   <h5>自身の投稿</h5>
   </div>
   <% if @posts.any? %>
-    <ul class="my-posts">
+    <div class="my-posts">
       <% @posts.each do |post| %>
         <p><%= link_to image_tag(post.photo.url), post %></p>
   <% end %>
-    </ul>
-    <ul class= "pagy">
+    </div>
+    <div class= "pagy">
     <%== pagy_bootstrap_nav(@pagy) %>
-    </ul>
+    </div>
     </div>
   <% end %>
 
@@ -74,9 +74,9 @@
 
 <div class="follow-bar"><%= render 'relationships/follow_button',  user: @user%></div>
 <li>プロフィール</li>
-<ul class="profile-intorduction">
+<div class="profile-intorduction">
 <p><%= simple_format(@user.self_introduction) %></p>
-</ul>
+</div>
 
 </div>
   
@@ -86,15 +86,15 @@
   <h5>このユーザーの投稿</h5>
   </div>
   <% if @posts.any? %>
-  <ul class="user-posts">
+  <div class="user-posts">
   <% @posts.each do |post| %>
     <p><%= link_to image_tag(post.photo.url), post %></p>
   <% end %>
-  </ul>
   </div>
-  <ul class= "pagy">
+  </div>
+  <div class= "pagy">
     <%== pagy_bootstrap_nav(@pagy) %>
-    </ul>
+    </div>
   <% end %>
   
 
@@ -110,9 +110,9 @@
 <% end %>
 
 <li>プロフィール</li>
-<ul class="profile-intorduction">
+<div class="profile-intorduction">
 <p><%= simple_format(@user.self_introduction) %></p>
-</ul>
+</div>
 </div>
   
   
@@ -121,14 +121,14 @@
   <h5>このユーザーの投稿</h5>
   </div>
   <% if @posts.any? %>
-  <ul class="user-posts">
+  <div class="user-posts">
   <% @posts.each do |post| %>
     <p><%= link_to image_tag(post.photo.url), post %></p>
   <% end %>
-  </ul>
-  <ul class= "pagy">
+  </div>
+  <div class= "pagy">
     <%== pagy_bootstrap_nav(@pagy) %>
-    </ul>
+    </div>
   <% end %>
   </div>
   <% end %>

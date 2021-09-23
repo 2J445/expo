@@ -5,4 +5,6 @@ class Post < ApplicationRecord
     validates :photo,  presence: true
     validates :title, presence: true, length: { maximum: 50 }
     validates :explanation, presence: false, length: { maximum: 400 }
+    
+    has_many :favorites, dependent: :destroy
 end

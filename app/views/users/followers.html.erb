@@ -1,7 +1,7 @@
 <div class="follower-list">
 <h3>フォロワー一覧</h3>
 <%= render 'users', users: @followers %>
-    <ul class= "pagy">
+    <div class= "pagy">
       <%== pagy_bootstrap_nav(@pagy) %>
-    </ul>
+    </div>
 </div>

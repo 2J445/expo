@@ -120,6 +120,8 @@
         text-align:center;
     margin-bottom: 20px;
         margin-top:30px;
+        position:relative;
+    	left: 0px;
     }
         
         img{
@@ -130,7 +132,12 @@
 .my-posts{
         text-align:center;
         margin-top:2%;
-        
+        .item{
+        text-align:center;
+        margin-top:10px;
+        position:relative;
+    	left: 5px;
+        }
         img{
     	width: 320px;
     	height: 200px;
@@ -206,6 +213,15 @@
 #user_password{
     width: 540px;
 }
+#user_password_confirmation{
+    width: 540px;
+}
+//サインアップボタン
+.signup-button{
+    width: 540px;
+    margin-left: 10px;
+}
+
 
 
 //PCサイズに変更
@@ -311,7 +327,7 @@
     margin-bottom: 20px;
         margin-top:30px;
         position:relative;
-    	right: 0px;
+    	left: 15px;
     }
     }
     .favorite-posts{
@@ -340,7 +356,7 @@
         text-align:center;
         margin-top:30px;
         position:relative;
-    	right: 0px;
+    	left: 20px;
         }
     
    p{
@@ -360,7 +376,7 @@
         margin-left: 0px;
     .item{
         text-align:center;
-        margin-top:30px;
+        margin-top:10px;
         position:relative;
     	right: 0px;
     }
@@ -453,6 +469,15 @@
 }
 #user_password{
     width: 630px;
+}
+#user_password_confirmation{
+    width: 630px;
+}
+
+//サインアップボタン
+.signup-button{
+    width: 630px;
+    margin-left: 0px;
 }
 
 }

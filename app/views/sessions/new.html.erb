@@ -15,10 +15,13 @@
         <%= f.label :password, 'パスワード' %>
         <%= f.password_field :password, class: 'form-control' %>
       </div>
-
+      
+      <div class="login-button">
       <%= f.submit 'ログイン', class: 'btn btn-primary w-100' %>
+      </div>
     <% end %>
-
+    <div class="singup-introduction">
     <p>サインアップを行っていない方は <%= link_to 'こちら', signup_path %></p>
+    </div>
   </div>
 </div>
