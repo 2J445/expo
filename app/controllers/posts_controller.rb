@@ -14,6 +14,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1 or /posts/1.json
   def show
+    
   end
 
   # GET /posts/new
@@ -71,8 +72,10 @@ class PostsController < ApplicationController
   
   def search
     @pagy,@search_posts = pagy(@q.result(distinct: true).order(id: :desc), items:10)
+    @search_posts.count
   end
-
+  
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post

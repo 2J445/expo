@@ -29,6 +29,24 @@
         }
     }
 }
+
+//フォローボタン
+    .postpage-follow-bar{
+        width: 10px;
+        position: relative;
+        right: 20px;
+}
+//戻りボタン(ログイン時)
+    .bpostpage-ack{
+        width: 50px;
+        margin-left: 280px;
+}
+//戻りボタン(ログインなし)
+    .unlogin-bpostpage-ack{
+         width: 50px;
+        margin-left: 270px;
+    }
+    
     
 .post-user{
         p{
@@ -237,6 +255,21 @@
             }
         }
         
+    }
+    //フォローボタン
+    .postpage-follow-bar{
+        position: relative;
+        right: 20px;
+    }
+    //戻りボタン(ログイン)
+    .bpostpage-ack{
+         width: 50px;
+        margin-left: 655px;
+    }
+    //戻りボタン(ログインなし)
+    .unlogin-bpostpage-ack{
+         width: 50px;
+        margin-left: 640px;
     }
     .post-user{
         p{

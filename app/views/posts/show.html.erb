@@ -41,6 +41,7 @@
 <h4>作者</h4>
  <p><%= link_to @post.user.name,  user_path(@post.user)%></p>
  </div>
+ <div class="postpage-follow-bar"><%= render 'relationships/postpage_follow_button',  user: @post.user %></div>
  
  
 <div class="post-intorduction">
@@ -54,11 +55,12 @@
 
 <%= render 'favorites/favorite_button', post: @post %>
 
-<ul class="back">
+<div class="bpostpage-ack">
 <%= link_to '戻る', '/' %>
-</ul>
-<% end %>
 </div>
+</div>
+<% end %>
+
 
 <% else %>
 <div class="show-post">
@@ -83,7 +85,7 @@
 </div>
 
 
-<div class="back">
+<div class="unlogin-bpostpage-ack">
 <%= link_to '戻る', '/' %>
 </div>
 </div>

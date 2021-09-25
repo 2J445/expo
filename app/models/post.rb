@@ -1,5 +1,6 @@
 class Post < ApplicationRecord
     belongs_to :user
+    belongs_to :follow
     mount_uploader :photo, PhotoUploader
     
     validates :photo,  presence: true

@@ -42,6 +42,7 @@ group :development do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'pry-byebug', group: :development
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'pagy'
 gem 'carrierwave', '~> 1.3', '>= 1.3.1'

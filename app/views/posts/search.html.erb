@@ -1,5 +1,7 @@
 <%= render 'toppages/search', q: @q, url: search_path %>
+
 <div class="search-list">
+  
 <% @search_posts.each do |post| %>
 <div class="post-box">
 <p><%= link_to image_tag(post.photo.url), post, size: '300x600' %></p>
@@ -17,7 +19,7 @@
 </div>
 <% end %>
 
-<% if @post.nil? %>
+<% if @search_posts.count == 0 %>
   <div class="search-nil">
   <p>お探しの作品は見つかりませんでした</p>
   </div>
