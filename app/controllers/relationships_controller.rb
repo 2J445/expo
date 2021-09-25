@@ -1,6 +1,6 @@
 class RelationshipsController < ApplicationController
   def create
-    @post = Post.all
+    @posts = Post.all
     user = User.find(params[:follow_id])
     current_user.follow(user)
     flash[:success] = 'ユーザをフォローしました。'

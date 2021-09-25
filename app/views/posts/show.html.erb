@@ -14,9 +14,9 @@
  </div>
  
  
-<div class="post-intorduction">
+<div class="post-explanation">
 <h4>詳細</h4>
-<div class="post-introduction-p">
+<div class="post-explanation-p">
 <p><%= simple_format(@post.explanation) %></p>
 </div>
 </div>
@@ -44,9 +44,9 @@
  <div class="postpage-follow-bar"><%= render 'relationships/postpage_follow_button',  user: @post.user %></div>
  
  
-<div class="post-intorduction">
+<div class="post-explanation">
 <h4>詳細</h4>
-<div class="post-introduction-p">
+<div class="post-explanation-p">
 <p><%= simple_format(@post.explanation) %></p>
 </div>
 </div>
@@ -77,13 +77,12 @@
  </div>
  
  
-<div class="post-intorduction">
+<div class="post-explanation">
 <h4>詳細</h4>
-<div class="post-introduction-p">
+<div class="post-explanation-p">
 <p><%= simple_format(@post.explanation) %></p>
 </div>
 </div>
-
 
 <div class="unlogin-bpostpage-ack">
 <%= link_to '戻る', '/' %>

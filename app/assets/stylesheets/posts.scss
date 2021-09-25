@@ -12,23 +12,25 @@
             font-size: 20px;
         }
 }
-    
-.post-intorduction{
-    .post-introduction-p{
-        border: solid 1px gray;
-        margin-left: 80px;
+.post-explanation{
+    .post-explanation-p{
         margin-bottom: 20px;
+        margin-left: 90px;
+        text-align: left;
+        padding-right: 10px;
+        padding-left: 10px;
         width: 400px;
-        height:600px;
+        height: 600px;
+        border: solid 1px gray;
+        word-break : break-all;
         p{
-            text-align: left;
-            width: 380px;
-            margin-left: 10px;
-            margin-top: 10px;
             font-size: 15px;
+            position: relative;
+            bottom: 5px;
         }
     }
 }
+
 
 //フォローボタン
     .postpage-follow-bar{
@@ -239,23 +241,28 @@
             font-size: 20px;
         }
     }
-    .post-intorduction{
-        .post-introduction-p{
-            border: solid 1px gray;
+    .post-explanation{
+        .post-explanation-p{
             margin-left: 350px;
             margin-bottom: 20px;
+            text-align: left;
+            padding-right: 10px;
+            padding-left: 10px;
             width: 600px;
-            height:500px;
+            height: 800px;
+            border: solid 1px gray;
+            word-break : break-all;
             p{
-                text-align: left;
-                width: 580px;
-                margin-left: 10px;
-                margin-top: 10px;
-                font-size: 15px;
+                font-size: 20px;
+                position: relative;
+                bottom: 5px;
             }
         }
-        
     }
+    
+    
+    
+    
     //フォローボタン
     .postpage-follow-bar{
         position: relative;
