@@ -7,7 +7,7 @@
   </div>
   <div class="flex-container">
     <% @posts.each do |post| %>
-    <p><%= link_to image_tag(post.photo.url), post %></p>
+    <p><%= link_to image_tag(post.photo.url, :alt => '最新投稿'), post %></p>
   <% end %>
   </div>
   
@@ -16,7 +16,7 @@
   </div>
   <div class="flex-container">
     <% @favorite_posts.each do |post| %>
-    <p><%= link_to image_tag(post.photo.url), post %></p>
+    <p><%= link_to image_tag(post.photo.url, :alt => '人気投稿'), post %></p>
   <% end %>
   </div>
   
@@ -26,9 +26,9 @@
   <div class="users">
     <% @follower_users.each do |user| %>
     <% if  user.image.present? %>
-      <p><%= link_to image_tag(user.image.url), user_path(user) if user.image? %></p>
-    <% else %>
-      <p><%= link_to image_tag(gravatar_url(user, { size: 280 })), user_path(user) %></p>
+      <p><%= link_to image_tag(user.image.url, :alt => 'ユーザーの写真'), user_path(user) if user.image? %></p>
+     <% else %>
+        <p><%= link_to image_tag(gravatar_url(user), :alt => 'ユーザーの写真'), user_path(user) %></p>
     <% end %>
   <% end %>
   </div>
@@ -39,7 +39,7 @@
   </div>
     <div class="flex-container">
     <% @my_posts.each do |post| %>
-      <p><%= link_to image_tag(post.photo.url), post %></p>
+      <p><%= link_to image_tag(post.photo.url, :alt => '自分の投稿'), post %></p>
     <% end %>
   </div>
   
@@ -50,7 +50,7 @@
   <div class="overview">
     <h3>アプリ概要</h3>
     <article class="border">
-     <%= image_tag 'overview.png' %>
+     <h1><%= image_tag 'overview.png', :alt => 'アプリ概要' %></h1>
     </article>
   </div>
   
@@ -60,7 +60,7 @@
   </div>
   <div class="flex-container">
     <% @posts.each do |post| %>
-    <p><%= link_to image_tag(post.photo.url), post %></p>
+    <p><%= link_to image_tag(post.photo.url, :alt => '最新投稿'), post %></p>
   <% end %>
   </div>
   
@@ -69,7 +69,7 @@
   </div>
   <div class="flex-container">
     <% @favorite_posts.each do |post| %>
-    <p><%= link_to image_tag(post.photo.url), post %></p>
+    <p><%= link_to image_tag(post.photo.url, :alt => '人気投稿'), post %></p>
   <% end %>
   </div>
   
@@ -79,9 +79,9 @@
   <div class="users">
     <% @follower_users.each do |user| %>
      <% if  user.image.present? %>
-        <p><%= link_to image_tag(user.image.url), user_path(user) if user.image? %></p>
+        <p><%= link_to image_tag(user.image.url, :alt => 'ユーザーの写真'), user_path(user) if user.image? %></p>
      <% else %>
-        <p><%= link_to image_tag(gravatar_url(user)), user_path(user) %></p>
+        <p><%= link_to image_tag(gravatar_url(user), :alt => 'ユーザーの写真'), user_path(user) %></p>
      <% end %>
     <% end %>
   </div>

@@ -3,12 +3,12 @@
 <div class="profile">
   <h3><%= @user.name %></h3>
 <% if  @user.image.present? %>
-  <p><%= link_to image_tag(@user.image.url) if @user.image? %></p>
+  <p><%= link_to image_tag(@user.image.url, :alt => '自分のプロフィール写真') if @user.image? %></p>
 <% else %>
-  <p><%= link_to image_tag(gravatar_url(@user)) %></p>
+  <p><%= link_to image_tag(gravatar_url(@user), :alt => '未設定時のプロフィール写真') %></p>
 <% end %>
 
-<li>プロフィール</li>
+<ul><li>プロフィール</li></ul>
 <div class="profile-intorduction">
 <p><%= simple_format(@user.self_introduction) %></p>
 </div>
@@ -38,7 +38,7 @@
      </div>
      <div class="favorite-posts">
      <% @likes.each do |post| %>
-       <p><%= link_to image_tag(post.photo.url), post, size: '300x600' %></p>
+       <p><%= link_to image_tag(post.photo.url, :alt => '自身のお気に入り投稿'), post %></p>
      <% end %>
      </div>
    </div>
@@ -50,7 +50,7 @@
   <% if @posts.any? %>
     <div class="my-posts">
       <% @posts.each do |post| %>
-        <p><%= link_to image_tag(post.photo.url), post %></p>
+        <p><%= link_to image_tag(post.photo.url, :alt => '自分の最新の投稿'), post %></p>
   <% end %>
     </div>
     <div class= "pagy">
@@ -59,21 +59,19 @@
     </div>
   <% end %>
 
-</div>
-
 
 <% else %>
 
 <div class="profile">
   <h3><%= @user.name %></h3>
 <% if  @user.image.present? %>
-  <p><%= link_to image_tag(@user.image.url) if @user.image? %></p>
+  <p><%= link_to image_tag(@user.image.url, :alt => 'プロフィール投稿') if @user.image? %></p>
 <% else %>
-  <p><%= link_to image_tag(gravatar_url(@user)) %></p>
+  <p><%= link_to image_tag(gravatar_url(@user), :alt => '未設定のプロフィール写真') %></p>
 <% end %>
 
 <div class="follow-bar"><%= render 'relationships/follow_button',  user: @user%></div>
-<li>プロフィール</li>
+<ul><li>プロフィール</li></ul>
 <div class="profile-intorduction">
 <p><%= simple_format(@user.self_introduction) %></p>
 </div>
@@ -88,7 +86,7 @@
   <% if @posts.any? %>
   <div class="user-posts">
   <% @posts.each do |post| %>
-    <p><%= link_to image_tag(post.photo.url), post %></p>
+    <p><%= link_to image_tag(post.photo.url, :alt => '閲覧しているユーザーの投稿'), post %></p>
   <% end %>
   </div>
   </div>
@@ -104,12 +102,12 @@
 <div class="profile">
   <h3><%= @user.name %></h3>
 <% if  @user.image.present? %>
-  <p><%= link_to image_tag(@user.image.url) if @user.image? %></p>
+  <p><%= link_to image_tag(@user.image.url, :alt => 'ユーザーのプロフィール写真') if @user.image? %></p>
 <% else %>
-  <p><%= link_to image_tag(gravatar_url(@user)) %></p>
+  <p><%= link_to image_tag(gravatar_url(@user), :alt => '未設定のユーザーのプロフィール写真') %></p>
 <% end %>
 
-<li>プロフィール</li>
+<ul><li>プロフィール</li></ul>
 <div class="profile-intorduction">
 <p><%= simple_format(@user.self_introduction) %></p>
 </div>
@@ -123,12 +121,13 @@
   <% if @posts.any? %>
   <div class="user-posts">
   <% @posts.each do |post| %>
-    <p><%= link_to image_tag(post.photo.url), post %></p>
+    <p><%= link_to image_tag(post.photo.url, :alt => '閲覧しているユーザーの投稿'), post %></p>
   <% end %>
   </div>
   <div class= "pagy">
     <%== pagy_bootstrap_nav(@pagy) %>
     </div>
+    </div>
   <% end %>
-  </div>
+
   <% end %>

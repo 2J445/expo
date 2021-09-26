@@ -1,7 +1,7 @@
 <% if logged_in? %>
 <% if current_user == @post.user %>
 <div class="show-post">
-<p><%= image_tag @post.photo.url, size: '600x400' if @post.photo? %></p>
+<p><%= image_tag @post.photo.url, :alt => '自分の作品' if @post.photo? %></p>
 
 
 <h4>作品名</h4>
@@ -32,7 +32,7 @@
 <% else %>
 <div class="show-post">
 
-<p><%= image_tag @post.photo.url, size: '600x400' if @post.photo? %></p>
+<p><%= image_tag @post.photo.url, :alt => '他者の作品' if @post.photo? %></p>
 
 <h4>作品名</h4>
 <p><%= @post.title %></p>
@@ -64,7 +64,7 @@
 
 <% else %>
 <div class="show-post">
-<p><%= image_tag @post.photo.url, size: '600x400' if @post.photo? %></p>
+<p><%= image_tag @post.photo.url, :alt => '未ログイン時の他社の作品' if @post.photo? %></p>
 
 
 <h4>作品名</h4>

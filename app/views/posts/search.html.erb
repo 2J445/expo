@@ -4,14 +4,14 @@
   
 <% @search_posts.each do |post| %>
 <div class="post-box">
-<p><%= link_to image_tag(post.photo.url), post, size: '300x600' %></p>
+<p><%= link_to image_tag(post.photo.url, :alt => '検索でヒットした投稿'), post %></p>
 
 <div class="search-post-information">
 <h5>作品名</h5>
 <p><%= post.title %></p>
 
 <h5>作者</h5>
-<p><%= link_to post.user.name %></p>
+<p><%= link_to post.user.name,  user_path(post.user) %></p>
 
 <h5>詳細</h5>
 <p><%= post.explanation %></p>

@@ -9,14 +9,13 @@
     <%= render 'layouts/edit_error_messages', model: f.object %>
       <div class="mb-3">
         <div class="user-image">
-        <%= image_tag @user.image.url if @user.image? %>
+        <%= image_tag @user.image.url, :alt => 'プロフィール写真' if @user.image? %>
         </div>
         <div class="select-image">
         <%= f.file_field :image %>
         </div>
       </div>
       
-      <div class="edit-items">
       <div class="mb-3">
         <%= f.label :name, 'ユーザーネーム' %>
         <%= f.text_field :name, class: 'form-control' %>
@@ -41,9 +40,9 @@
         <%= f.label :password_confirmation, 'パスワード再確認' %>
         <%= f.password_field :password_confirmation, class: 'form-control' %>
       </div>
-
+      <div>
       <%= f.submit '保存', class: 'btn btn-primary w-100' %>
+      </div>
     <% end %>
-    </div>
   </div>
 </div>

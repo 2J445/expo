@@ -3,7 +3,7 @@
 <% @likes.each do |post| %>
 
 <div class="post-box">
-<p><%= link_to image_tag(post.photo.url), post, size: '300x600' %></p>
+<p><%= link_to image_tag(post.photo.url), :alt => 'お気に入り登録している写真' %></p>
 
 <div class="like-post-information">
 <h5>作品名</h5>
