@@ -13,23 +13,22 @@
         }
 }
 .post-explanation{
-    .post-explanation-p{
-        margin-bottom: 20px;
-        margin-left: 90px;
-        text-align: left;
-        padding-right: 10px;
-        padding-left: 10px;
-        width: 400px;
-        height: 600px;
-        border: solid 1px gray;
-        word-break : break-all;
-        p{
-            font-size: 15px;
-            position: relative;
-            bottom: 5px;
+        .post-explanation-p{
+            margin-left: 75px;
+            margin-bottom: 10px;
+            text-align: left;
+            padding-left: 10px;
+            width: 400px;
+            height: 800px;
+            border: solid 1px gray;
+            word-break : break-all;
+            p{
+                position: relative;
+                bottom: 5px;
+            }
         }
     }
-}
+    
 
 
 //フォローボタン
@@ -38,16 +37,11 @@
         position: relative;
         right: 20px;
 }
-//戻りボタン(ログイン時)
-    .bpostpage-ack{
+//戻りボタン
+    .bpostpage-back{
         width: 50px;
-        margin-left: 280px;
+        margin-left: 260px;
 }
-//戻りボタン(ログインなし)
-    .unlogin-bpostpage-ack{
-         width: 50px;
-        margin-left: 270px;
-    }
     
     
 .post-user{
@@ -243,40 +237,29 @@
     }
     .post-explanation{
         .post-explanation-p{
-            margin-left: 350px;
-            margin-bottom: 20px;
+            margin-left: 348px;
+            margin-bottom: 10px;
             text-align: left;
-            padding-right: 10px;
             padding-left: 10px;
             width: 600px;
             height: 800px;
             border: solid 1px gray;
             word-break : break-all;
             p{
-                font-size: 20px;
                 position: relative;
                 bottom: 5px;
             }
         }
     }
-    
-    
-    
-    
-    //フォローボタン
-    .postpage-follow-bar{
-        position: relative;
-        right: 20px;
+    .favorite-btn{
+        margin-right: 50px;
+        width: 100px;
     }
+    
     //戻りボタン(ログイン)
-    .bpostpage-ack{
+    .bpostpage-back{
          width: 50px;
-        margin-left: 655px;
-    }
-    //戻りボタン(ログインなし)
-    .unlogin-bpostpage-ack{
-         width: 50px;
-        margin-left: 640px;
+        margin-left: 635px;
     }
     .post-user{
         p{
@@ -453,11 +436,6 @@
             margin-left: 10px;
         }
         
-    }
-    //お気に入りボタン
-    .postcard-favorite-button{
-        position: relative;
-        bottom: 50px;
     }
 }
 

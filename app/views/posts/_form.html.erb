@@ -4,17 +4,17 @@
 
   <div class="photo">
     <%= form.label '作品' %>
-    <%= form.file_field :photo %>
+    <%= form.file_field :photo, id: "post_作品" %>
   </div>
   
   <div class="title">
     <%= form.label 'タイトル' %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, id: "post_タイトル"  %>
   </div>
   
   <div class="introduction">
     <%= form.label '詳細' %>
-    <%= form.text_area :explanation %>
+    <%= form.text_area :explanation, id: "post_詳細"  %>
   </div>
 
   <div class="actions">

@@ -25,7 +25,7 @@ body{
     top: 5px;
     right: 15px;
 }
-.btn{
+.navbar-btn{
     font-size: 18px;
     position:relative;
     top: 2px;
@@ -44,7 +44,7 @@ body{
         top: 6px;
         right: 0px;
     }
-    .btn{
+    .navbar-btn{
         font-size: 16px;
         position:relative;
         top: 3px;

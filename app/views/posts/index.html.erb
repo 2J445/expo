@@ -2,7 +2,7 @@
 <div class="all-post">
       <% @posts.each do |post| %>
       <div class="post-box">
-      <p><%= link_to image_tag(post.photo.url, :alt => '一覧時の作品の写真'), post, size: '300x600' %></p>
+      <p><%= link_to image_tag(post.photo.url, :alt => '一覧時の作品の写真'), post  %></p>
 
      <div class="all-post-information">
      <h5>作品名</h5>
@@ -16,5 +16,7 @@
     </div>
     </div>
       <% end %>
-      <%= pagy_bootstrap_nav(@pagy) %>
+      <div class="post-index-pagy">
+      <%== pagy_bootstrap_nav(@pagy) %>
+      </div>
 </div>

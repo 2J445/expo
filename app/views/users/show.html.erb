@@ -8,7 +8,9 @@
   <p><%= link_to image_tag(gravatar_url(@user), :alt => '未設定時のプロフィール写真') %></p>
 <% end %>
 
-<ul><li>プロフィール</li></ul>
+<div>
+<p>プロフィール</p>
+</div>
 <div class="profile-intorduction">
 <p><%= simple_format(@user.self_introduction) %></p>
 </div>
@@ -71,7 +73,9 @@
 <% end %>
 
 <div class="follow-bar"><%= render 'relationships/follow_button',  user: @user%></div>
-<ul><li>プロフィール</li></ul>
+<div>
+<p>プロフィール</p>
+</div>
 <div class="profile-intorduction">
 <p><%= simple_format(@user.self_introduction) %></p>
 </div>
@@ -107,7 +111,9 @@
   <p><%= link_to image_tag(gravatar_url(@user), :alt => '未設定のユーザーのプロフィール写真') %></p>
 <% end %>
 
-<ul><li>プロフィール</li></ul>
+<div>
+<p>プロフィール</p>
+</div>
 <div class="profile-intorduction">
 <p><%= simple_format(@user.self_introduction) %></p>
 </div>

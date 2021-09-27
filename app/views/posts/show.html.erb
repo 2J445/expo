@@ -52,10 +52,11 @@
 </div>
 
 
+<div class~"favorite-button">
+<p><%= render 'favorites/favorite_button', post: @post %></p>
+</div>
 
-<%= render 'favorites/favorite_button', post: @post %>
-
-<div class="bpostpage-ack">
+<div class="bpostpage-back">
 <%= link_to '戻る', '/' %>
 </div>
 </div>
@@ -84,7 +85,7 @@
 </div>
 </div>
 
-<div class="unlogin-bpostpage-ack">
+<div class="bpostpage-back">
 <%= link_to '戻る', '/' %>
 </div>
 </div>
