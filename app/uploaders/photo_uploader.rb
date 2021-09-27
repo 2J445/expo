@@ -10,6 +10,14 @@ class PhotoUploader < CarrierWave::Uploader::Base
  else
   include Cloudinary::CarrierWave
  end
+ 
+ def extension_white_list
+    %w(jpg jpeg gif png)
+ end
+  
+ def size_range
+  1..5.megabytes
+ end
   # storage :fog
 
   # Override the directory where uploaded files will be stored.

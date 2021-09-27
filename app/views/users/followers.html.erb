@@ -1,7 +1,14 @@
 <div class="follower-list">
 <h3>フォロワー一覧</h3>
 <%= render 'users', users: @followers %>
-    <div class= "pagy">
-      <%== pagy_bootstrap_nav(@pagy) %>
-    </div>
+
+<% if @followers.count == 0 %>
+<div class="nil-followers-user">
+    <p>現在、あなたをフォローしているフォロワーはいません</p>
+</div>
+<% end %>
+
+<div class= "pagy">
+  <%== pagy_bootstrap_nav(@pagy) %>
+</div>
 </div>

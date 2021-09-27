@@ -1,4 +1,8 @@
 ja:
+  errors:
+    messages:
+      mini_magick_processing_error: を確認できませんでした。拡張子をご確認ください。
+      max_size_error: のサイズが大きすぎます
   activerecord:
     models:
       user: ユーザー
@@ -7,10 +11,11 @@ ja:
       user:
         name: 名前
         email: Eメール
-        password_digest: パスワード
         password: パスワード
+        password_confirmation: パスワード再確認
       
       post:
         title: 作品名
         photo: 作品
         
+      

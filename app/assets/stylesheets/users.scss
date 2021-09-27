@@ -268,6 +268,15 @@
           margin-bottom: 20px;
        }
     }
+    
+    .nil-following-user{
+        margin-top: 20px;
+        margin-bottom: 480px;
+        p{
+            font-size: 20px;
+        }
+    }
+    
 
 //フォロワー
     .follower{
@@ -277,6 +286,15 @@
           margin-bottom: 20px;
         }
      }
+     
+     .nil-followers-user{
+        margin-top: 20px;
+        margin-bottom: 480px;
+        p{
+            font-size: 20px;
+        }
+    }
+    
 
 //ユーザーリスト
 .user-list{
@@ -444,6 +462,13 @@
             text-align:center;
         }
     }
+    .nil-like-post{
+        margin-top: 20px;
+        margin-bottom: 480px;
+        p{
+            font-size: 20px;
+        }
+    }
     
 //サインアップのエラーメッセージ
 .field_with_errors{
@@ -470,4 +495,5 @@
     margin-left: 0px;
 }
 
+//
 }
