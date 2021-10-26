@@ -45,14 +45,13 @@
   
 
 <% else %>
-<%= render 'search', q: @q, url: search_path %>
-
   <div class="overview">
-    <h3>アプリ概要</h3>
-    <article class="border">
+    <div class="border">
      <h1><%= image_tag 'overview.png', :alt => 'アプリ概要' %></h1>
-    </article>
+    </div>
   </div>
+  
+  <%= render 'search', q: @q, url: search_path %>
   
   <div class="item">
   <h5>最新の投稿</h5>
