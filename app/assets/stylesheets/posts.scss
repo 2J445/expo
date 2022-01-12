@@ -14,7 +14,8 @@
 }
 .post-explanation{
         .post-explanation-p{
-            margin-left: 75px;
+            margin-left: auto;
+            margin-right: auto;
             margin-bottom: 10px;
             text-align: left;
             padding-left: 10px;
@@ -33,15 +34,19 @@
 
 //フォローボタン
     .postpage-follow-bar{
+        text-align: center;
         width: 10px;
-        position: relative;
-        right: 20px;
+        position:relative;
+        right: 100px;
 }
 //戻りボタン
     .bpostpage-back{
-        width: 50px;
-        margin-left: 260px;
-}
+         width: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        left: 10px;
+    }
     
     
 .post-user{
@@ -237,12 +242,13 @@
     }
     .post-explanation{
         .post-explanation-p{
-            margin-left: 348px;
+            width: 600px;
+            height: 800px;
+            margin-left: auto;
+            margin-right: auto;
             margin-bottom: 10px;
             text-align: left;
             padding-left: 10px;
-            width: 600px;
-            height: 800px;
             border: solid 1px gray;
             word-break : break-all;
             p{
@@ -252,14 +258,27 @@
         }
     }
     .favorite-btn{
-        margin-right: 50px;
         width: 120px;
+        margin-right: auto;
+        margin-left: auto;
+        position: relative;
+        right: 110px;
+    }
+    //フォローボタン
+    .postpage-follow-bar{
+        text-align: center;
+        width: 10px;
+        position:relative;
+        right: 100px;
     }
     
     //戻りボタン(ログイン)
     .bpostpage-back{
          width: 50px;
-        margin-left: 635px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        left: 10px;
     }
     .post-user{
         p{
@@ -284,7 +303,7 @@
             }
             p{
                 font-size: 18px;
-                width:920px;
+                width:800px;
                 height: 30px;
                 margin-bottom: 10px;
                 white-space: nowrap;
@@ -379,7 +398,7 @@
             }
             p{
                 font-size: 18px;
-                width:920px;
+                width:800px;
                 height: 30px;
                 margin-bottom: 10px;
                 white-space: nowrap;
