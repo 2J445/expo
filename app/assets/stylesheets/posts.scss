@@ -29,6 +29,14 @@
             }
         }
     }
+.favorite-btn{
+        width: 100px;
+        margin-right: auto;
+        margin-left: auto;
+        position: relative;
+        right: 130px;
+    }
+    
     
 
 
@@ -37,7 +45,7 @@
         text-align: center;
         width: 10px;
         position:relative;
-        right: 100px;
+        right: 125px;
 }
 //戻りボタン
     .bpostpage-back{
@@ -90,7 +98,7 @@
     }
     .search-pagy{
             text-align:center;
-            margin-left: 100px;
+            margin-left: 0px;
     }
     
     //検索結果が無い時
