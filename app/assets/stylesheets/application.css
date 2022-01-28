@@ -26,16 +26,24 @@ body{
 .navbar-nav{
     font-size: 18px;
     position:relative;
-    top: 5px;
-    right: 15px;
+    top: 0px;
+    right: -10px;
 }
 .navbar-btn{
     font-size: 18px;
     position:relative;
-    top: 2px;
-    right: 10px;
+    top: -8px;
+    right: -25px;
 }
-
+.overview-nav{
+        position: relative;
+        left: -40px;
+        top: 10px;
+    }
+.post-nav{
+    position: relative;
+    bottom: 24.5px;
+}
 /*ロゴ*/
 .logo{
     margin-left: 0px;
@@ -67,7 +75,15 @@ body{
         top: 12px;
         right: 0px;
     }
-    
+    .overview-nav{
+        position: relative;
+        left: 13px;
+        top: 0px;
+    }
+    .post-nav{
+      position: relative;
+      bottom: 0px;
+    }
     /*ロゴ*/
     .logo{
         margin-left: 50px;
