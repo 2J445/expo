@@ -45,10 +45,8 @@
   
 
 <% else %>
-  <div class="overview">
-    <div class="border">
-     <h1><%= image_tag 'overview.png', :alt => 'アプリ概要' %></h1>
-    </div>
+  <div class="top-image">
+     <h1><%= image_tag 'top-image.png', :alt => 'アプリ概要' %></h1>
   </div>
   
   <%= render 'search', q: @q, url: search_path %>
